@@ -5,101 +5,106 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>*{
+    <style>
+      * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-    }
-    body{
+      }
+      body {
         height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
-    }
-    .container{
-        width: 600px;
+      }
+      .container {
+        width: 320px;
         height: 200px;
         display: flex;
         align-items: center;
         justify-content: center;
-    }
-    .box{
+      }
+      .box {
         background: rgb(18, 19, 18);
-        width: 100px;
-        height: 100px;
-        margin: 0 15px;
+        width: 50px;
+        height: 50px;
+        margin: 0 5px;
         border-radius: 10%;
-    }
-    h3{
+      }
+      h6 {
         text-align: center;
         padding-top: 2px;
         color: blanchedalmond;
-        padding-top: 10px;
-        
-    }
-    .box h1{
-        font-size: 50px;
+        padding-top: 8px;
+      }
+      .box h1 {
+        font-size: 20px;
         text-align: center;
         font-family: sans-serif;
         font-weight: 800;
         margin-bottom: 15px;
         color: blanchedalmond;
-    }
-    .alert{
+      }
+      .alert {
         display: none;
-    }</style>
+        border-radius: 20px;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
-        <div style="width: 130px;" class="box">
-            <h3 id="daystxt">Days</h2>
-            <h1 id="days">000</h1>
-        </div>
-        <div class="box">
-            <h3 id="hourstxt">Hours</h2>
-            <h1 id="hours">00</h1>
-        </div>
-        <div class="box">
-            <h3 id="minutestxt">Minutes</h2>
-            <h1 id="minutes">00</h1>
-        </div>
-        <div class="box">
-            <h3 id="secondstxt">Seconds</h2>
-            <h1 id="seconds">00</h1>
-        </div>
+      <div class="box">
+        <h6 id="daystxt">Days</h6>
+        <h1 id="days">000</h1>
+      </div>
+      <div class="box">
+        <h6 id="hourstxt">Hours</h6>
+        <h1 id="hours">00</h1>
+      </div>
+      <div class="box">
+        <h6 id="minutestxt">Minutes</h6>
+        <h1 id="minutes">00</h1>
+      </div>
+      <div class="box">
+        <h6 id="secondstxt">Seconds</h6>
+        <h1 id="seconds">00</h1>
+      </div>
     </div>
 
-    <div style="background: rgb(204, 24, 24);" class="alert">
-        <h1 style="padding: 50px 80px;color: white;">We are sorry, Event ended ! </h1>
+    <div style="background: rgb(204, 24, 24)" class="alert">
+      <h1 style="padding: 50px 80px; color: white">Happy Birthday, Fredy!</h1>
     </div>
-    <script>const finaleDate = new Date("August 19, 2021 00:00:00").getTime();
+    <script>
+      const finaleDate = new Date("August 11, 2021 00:00:00").getTime();
 
-        const timer = () =>{
-            const now = new Date().getTime();
-            let diff = finaleDate - now;
-            if(diff < 0){
-                document.querySelector('.alert').style.display = 'block';
-                document.querySelector('.container').style.display = 'none';
-            }
-        
-            let days = Math.floor(diff / (1000*60*60*24));
-            let hours = Math.floor(diff % (1000*60*60*24) / (1000*60*60));
-            let minutes = Math.floor(diff % (1000*60*60)/ (1000*60));
-            let seconds = Math.floor(diff % (1000*60) / 1000);
-        
-            days <= 99 ? days = `0${days}` : days;
-            days <= 9 ? days = `00${days}` : days;
-            hours <= 9 ? hours = `0${hours}` : hours;
-            minutes <= 9 ? minutes = `0${minutes}` : minutes;
-            seconds <= 9 ? seconds = `0${seconds}` : seconds;   
-        
-            document.querySelector('#days').textContent = days;
-            document.querySelector('#hours').textContent = hours;
-            document.querySelector('#minutes').textContent = minutes;
-            document.querySelector('#seconds').textContent = seconds;
-        
+      const timer = () => {
+        const now = new Date().getTime();
+        let diff = finaleDate - now;
+        if (diff < 0) {
+          document.querySelector(".alert").style.display = "block";
+          document.querySelector(".container").style.display = "none";
         }
-        timer();
-        setInterval(timer,1000);</script>
+
+        let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        let hours = Math.floor(
+          (diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        days <= 99 ? (days = `0${days}`) : days;
+        days <= 9 ? (days = `00${days}`) : days;
+        hours <= 9 ? (hours = `0${hours}`) : hours;
+        minutes <= 9 ? (minutes = `0${minutes}`) : minutes;
+        seconds <= 9 ? (seconds = `0${seconds}`) : seconds;
+
+        document.querySelector("#days").textContent = days;
+        document.querySelector("#hours").textContent = hours;
+        document.querySelector("#minutes").textContent = minutes;
+        document.querySelector("#seconds").textContent = seconds;
+      };
+      timer();
+      setInterval(timer, 1000);
+    </script>
   </body>
 </html>
