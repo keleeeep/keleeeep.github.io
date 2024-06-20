@@ -2,111 +2,250 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Countdown</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body {
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .container {
-        width: 320px;
-        height: 200px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .box {
-        background-color: rgb(114, 114, 114);
-        width: 80px;
-        height: 80px;
-        margin: 0 5px;
-        border-radius: 10%;
-      }
-      h6 {
-        font-size: 12px;
-        text-align: center;
-        font-family: sans-serif;
-        padding-top: 2px;
-        color: rgb(255, 255, 255);
-        padding-top: 17px;
-      }
-      .box h1 {
-        font-size: 30px;
-        text-align: center;
-        font-family: sans-serif;
-        font-weight: 800;
-        margin-bottom: 15px;
-        color: rgb(255, 255, 255);
-      }
-      .alert {
-        display: none;
-        border-radius: 20px;
-      }
-    </style>
+    <script type="module" src="/main.js"></script>
+    <title>Test speech-to-text</title>
   </head>
+  <style>
+    :root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background: radial-gradient(
+        circle at 100%,
+        rgba(3, 6, 21, 0.9) 15%,
+        rgba(189, 205, 226, 0.5) 5%,
+        rgba(7, 9, 22, 0.9) 15%
+      ),
+      url('./public/chevron.png') center/cover;
+
+    height: 100vh;
+    padding: 40px 0;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 15px;
+  }
+
+  h1 {
+    color: #fff;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+
+  .btn-wrapper {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    border: none;
+    cursor: pointer;
+    padding: 12px 24px;
+    border-radius: 3px;
+    font-weight: 600;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: opacity 400ms ease-in-out;
+  }
+
+  button:disabled {
+    opacity: 0.47;
+    cursor: default;
+  }
+
+  button:hover:not(:disabled) {
+    opacity: 0.9;
+  }
+
+  button > svg {
+    height: 1rem;
+  }
+
+  .btn-start {
+    background-color: #ff2c4f;
+    color: #fff;
+  }
+
+  .btn-stop {
+    background-color: rgb(7, 2, 44);
+    color: #fff;
+  }
+
+  .result {
+    background-color: #fff;
+    width: 100%;
+    min-height: 200px;
+    padding: 10px;
+    border-radius: 3px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-transform: capitalize;
+  }
+
+  .result:empty {
+    display: none;
+  }
+
+  .hidden {
+    display: none !important;
+  }
+
+  @media screen and (min-width: 768px) {
+    h1 {
+      font-size: 3.125rem;
+      text-transform: capitalize;
+    }
+
+    .container {
+      padding: 0 30px;
+    }
+
+    .result {
+      padding: 15px;
+    }
+  }
+  </style>
   <body>
     <div class="container">
-      <div class="box">
-        <h6 id="daystxt">Days</h6>
-        <h1 id="days">000</h1>
+      <h1>coba dulu deh</h1>
+
+      <div class="btn-wrapper">
+        <button id="startBtn" class="btn-start">
+          <svg viewBox="0 0 100 100" class="hidden">
+            <!-- Outer circle -->
+            <circle
+              cx="50"
+              cy="50"
+              r="40"
+              stroke="#ccc"
+              stroke-width="5"
+              fill="none"
+            />
+
+            <!-- Inner circle indicating recording -->
+            <circle
+              cx="50"
+              cy="50"
+              r="30"
+              stroke="#ccc"
+              stroke-width="5"
+              fill="none"
+            >
+              <animate
+                attributeName="r"
+                values="30; 25; 30"
+                dur="1.5s"
+                repeatCount="indefinite"
+              />
+            </circle>
+
+            <!-- Record icon in the center -->
+            <circle cx="50" cy="50" r="5" fill="#ccc" />
+          </svg>
+
+          <span> Start Recording </span>
+        </button>
+        <button id="stopBtn" class="btn-stop" disabled>Stop Recording</button>
       </div>
-      <div class="box">
-        <h6 id="hourstxt">Hours</h6>
-        <h1 id="hours">00</h1>
-      </div>
-      <div class="box">
-        <h6 id="minutestxt">Minutes</h6>
-        <h1 id="minutes">00</h1>
-      </div>
-      <div class="box">
-        <h6 id="secondstxt">Seconds</h6>
-        <h1 id="seconds">00</h1>
-      </div>
+
+      <div id="result" class="result"></div>
     </div>
-
-    <div style="background: rgb(204, 24, 24)" class="alert">
-      <h1 style="padding: 50px 80px; color: white">Happy Birthday, Fredy!</h1>
-    </div>
-    <script>
-      const finaleDate = new Date("August 11, 2021 00:00:00").getTime();
-
-      const timer = () => {
-        const now = new Date().getTime();
-        let diff = finaleDate - now;
-        if (diff < 0) {
-          document.querySelector(".alert").style.display = "block";
-          document.querySelector(".container").style.display = "none";
-        }
-
-        let days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        let hours = Math.floor(
-          (diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-        let seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-        days <= 99 ? (days = `0${days}`) : days;
-        days <= 9 ? (days = `00${days}`) : days;
-        hours <= 9 ? (hours = `0${hours}`) : hours;
-        minutes <= 9 ? (minutes = `0${minutes}`) : minutes;
-        seconds <= 9 ? (seconds = `0${seconds}`) : seconds;
-
-        document.querySelector("#days").textContent = days;
-        document.querySelector("#hours").textContent = hours;
-        document.querySelector("#minutes").textContent = minutes;
-        document.querySelector("#seconds").textContent = seconds;
-      };
-      timer();
-      setInterval(timer, 1000);
-    </script>
   </body>
+  <script>
+    const resultElement = document.getElementById('result');
+const startBtn = document.getElementById('startBtn');
+const animatedSvg = startBtn.querySelector('svg');
+const stopBtn = document.getElementById('stopBtn');
+
+startBtn.addEventListener('click', startRecording);
+stopBtn.addEventListener('click', stopRecording);
+
+let recognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+if (recognition) {
+  recognition = new recognition();
+  recognition.continuous = true;
+  recognition.interimResults = true;
+  recognition.lang = 'id-ID';
+
+  recognition.onstart = () => {
+    startBtn.disabled = true;
+    stopBtn.disabled = false;
+    animatedSvg.classList.remove('hidden');
+    console.log('Recording started');
+  };
+
+  recognition.onresult = function (event) {
+    let result = '';
+
+    for (let i = event.resultIndex; i < event.results.length; i++) {
+      if (event.results[i].isFinal) {
+        result += event.results[i][0].transcript + ' ';
+      } else {
+        result += event.results[i][0].transcript;
+      }
+    }
+
+    resultElement.innerText = result;
+
+    if (result.toLowerCase().includes('stop recording')) {
+      resultElement.innerText = result.replace(/stop recording/gi, '');
+      stopRecording();
+    }
+  };
+
+  recognition.onerror = function (event) {
+    startBtn.disabled = false;
+    stopBtn.disabled = true;
+    console.error('Speech recognition error:', event.error);
+  };
+
+  recognition.onend = function () {
+    startBtn.disabled = false;
+    stopBtn.disabled = true;
+    animatedSvg.classList.add('hidden');
+    console.log('Speech recognition ended');
+  };
+} else {
+  console.error('Speech recognition not supported');
+}
+
+function startRecording() {
+  resultElement.innerText = '';
+  recognition.start();
+}
+
+function stopRecording() {
+  if (recognition) {
+    recognition.stop();
+  }
+}
+  </script>
 </html>
