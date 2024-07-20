@@ -1,251 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="module" src="/main.js"></script>
-    <title>Test speech-to-text</title>
-  </head>
-  <style>
-    :root {
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-    font-weight: 400;
 
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kokel Technology</title>
+    <link rel="shortcut icon" type="image/png" href="" />
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/essentials.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+</head>
 
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  body {
-    background: radial-gradient(
-        circle at 100%,
-        rgba(3, 6, 21, 0.9) 15%,
-        rgba(189, 205, 226, 0.5) 5%,
-        rgba(7, 9, 22, 0.9) 15%
-      ),
-      url('./public/chevron.png') center/cover;
-
-    height: 100vh;
-    padding: 40px 0;
-  }
-
-  .container {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 15px;
-  }
-
-  h1 {
-    color: #fff;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-  }
-
-  .btn-wrapper {
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-  }
-
-  button {
-    display: flex;
-    align-items: center;
-    column-gap: 5px;
-    border: none;
-    cursor: pointer;
-    padding: 12px 24px;
-    border-radius: 3px;
-    font-weight: 600;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    transition: opacity 400ms ease-in-out;
-  }
-
-  button:disabled {
-    opacity: 0.47;
-    cursor: default;
-  }
-
-  button:hover:not(:disabled) {
-    opacity: 0.9;
-  }
-
-  button > svg {
-    height: 1rem;
-  }
-
-  .btn-start {
-    background-color: #ff2c4f;
-    color: #fff;
-  }
-
-  .btn-stop {
-    background-color: rgb(7, 2, 44);
-    color: #fff;
-  }
-
-  .result {
-    background-color: #fff;
-    width: 100%;
-    min-height: 200px;
-    padding: 10px;
-    border-radius: 3px;
-    margin-top: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    text-transform: capitalize;
-  }
-
-  .result:empty {
-    display: none;
-  }
-
-  .hidden {
-    display: none !important;
-  }
-
-  @media screen and (min-width: 768px) {
-    h1 {
-      font-size: 3.125rem;
-      text-transform: capitalize;
-    }
-
-    .container {
-      padding: 0 30px;
-    }
-
-    .result {
-      padding: 15px;
-    }
-  }
-  </style>
-  <body>
-    <div class="container">
-      <h1>coba dulu deh</h1>
-
-      <div class="btn-wrapper">
-        <button id="startBtn" class="btn-start">
-          <svg viewBox="0 0 100 100" class="hidden">
-            <!-- Outer circle -->
-            <circle
-              cx="50"
-              cy="50"
-              r="40"
-              stroke="#ccc"
-              stroke-width="5"
-              fill="none"
-            />
-
-            <!-- Inner circle indicating recording -->
-            <circle
-              cx="50"
-              cy="50"
-              r="30"
-              stroke="#ccc"
-              stroke-width="5"
-              fill="none"
-            >
-              <animate
-                attributeName="r"
-                values="30; 25; 30"
-                dur="1.5s"
-                repeatCount="indefinite"
-              />
-            </circle>
-
-            <!-- Record icon in the center -->
-            <circle cx="50" cy="50" r="5" fill="#ccc" />
-          </svg>
-
-          <span> Start Recording </span>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <h3 class="mb-0 text-black opacity-9">Bahan Ajar Fonologi</h3>
+        <button class="navbar-toggler" id="solidColor" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
         </button>
-        <button id="stopBtn" class="btn-stop" disabled>Stop Recording</button>
-      </div>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-black" href="index.html">Beranda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-black" href="introduction.html">Pendahuluan</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-black" href="">Petunjuk</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-black" href="">Materi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-black" href="about.html">Tentang</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section id="home">
+        <div class="container">
+            <div class="row mt-100 pt-100">
+                <div class="col-md-6 p-0">
+                    <h1 class="m-0 text-black text-left opacity-8" style="font-weight: 900;">
+                        Fonologi Bahasa Indonesia Bagi Pembelajar BIPA
+                    </h1>
+                    <p class="pt-50">
+                        Bahan ajar fonologi bagi pembelajar BIPA Korea
+                    </p>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <a href="compatence-map.html"><button type="button" class="btn btn-outline-custom">Peta Kompetensi</button></a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href=""><button type="button" class="btn btn-outline-custom">Prakegiatan</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="introduction">
+        <div class="container">
+    
+        </div>
+    </section>
+    <section id="instruction">
+        <div class="container">
 
-      <div id="result" class="result"></div>
-    </div>
-  </body>
-  <script>
-    const resultElement = document.getElementById('result');
-const startBtn = document.getElementById('startBtn');
-const animatedSvg = startBtn.querySelector('svg');
-const stopBtn = document.getElementById('stopBtn');
+        </div>
+    </section>
+    <section id="material">
+        <div class="container">
+            
+        </div>
+    </section>
+    <section id="about">
+        <div class="container">
+            
+        </div>
+    </section>
 
-startBtn.addEventListener('click', startRecording);
-stopBtn.addEventListener('click', stopRecording);
+    <script src="https://kit.fontawesome.com/3bc2e700df.js"></script>
+    <script src="<assets/js/jquery-3.5.1.min.js"></script>
+    <script src="<assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+</body>
 
-let recognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-
-if (recognition) {
-  recognition = new recognition();
-  recognition.continuous = true;
-  recognition.interimResults = true;
-  recognition.lang = 'id-ID';
-
-  recognition.onstart = () => {
-    startBtn.disabled = true;
-    stopBtn.disabled = false;
-    animatedSvg.classList.remove('hidden');
-    console.log('Recording started');
-  };
-
-  recognition.onresult = function (event) {
-    let result = '';
-
-    for (let i = event.resultIndex; i < event.results.length; i++) {
-      if (event.results[i].isFinal) {
-        result += event.results[i][0].transcript + ' ';
-      } else {
-        result += event.results[i][0].transcript;
-      }
-    }
-
-    resultElement.innerText = result;
-
-    if (result.toLowerCase().includes('stop recording')) {
-      resultElement.innerText = result.replace(/stop recording/gi, '');
-      stopRecording();
-    }
-  };
-
-  recognition.onerror = function (event) {
-    startBtn.disabled = false;
-    stopBtn.disabled = true;
-    console.error('Speech recognition error:', event.error);
-  };
-
-  recognition.onend = function () {
-    startBtn.disabled = false;
-    stopBtn.disabled = true;
-    animatedSvg.classList.add('hidden');
-    console.log('Speech recognition ended');
-  };
-} else {
-  console.error('Speech recognition not supported');
-}
-
-function startRecording() {
-  resultElement.innerText = '';
-  recognition.start();
-}
-
-function stopRecording() {
-  if (recognition) {
-    recognition.stop();
-  }
-}
-  </script>
 </html>
