@@ -106,9 +106,6 @@ nav .navbar-toggler-icon {
 #home {
   position: relative;
 }
-#home .container {
-  height: 100vh !important;
-}
 
 #home .title {
   font-size: 50px;
@@ -305,14 +302,82 @@ form .error {
   border-color: #8C6849;
 }
 
-/* .btn-custom {
+.btn-primary {
   color: #fff;
   background-color: #8C6849;
   border-color: #8C6849;
 }
 
-.btn-custom:hover {
-  color: #fff;
-  background-color: #8C6849;
+.btn-primary:hover {
+  color: #8C6849;
+  background-color: #fff;
   border-color: #8C6849;
-} */
+}
+
+.btn-primary:click {
+  color: #8C6849;
+  background-color: #fff;
+  border-color: #8C6849;
+}
+
+.btn-primary:disabled {
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+.btn-secondary {
+  color: #fff;
+  background-color: rgb(108, 111, 113);
+  border-color: rgb(108, 111, 113);
+}
+
+.btn-secondary:hover {
+  color: rgb(108, 111, 113);
+  background-color: #fff;
+  border-color: rgb(108, 111, 113);
+}
+
+.unit-cover {
+  width: 100%;
+  height: auto;
+}
+
+.card-unit:hover {
+  cursor: pointer;
+}
+
+.card-unit{
+  background-color: #FEEFD1;
+}
+
+.audio-unit:hover{
+  cursor: pointer;
+}
+
+/* speech to text style */
+.result {
+  background-color: #fff;
+  width: 100%;
+  min-height: 200px;
+  padding: 10px;
+  border-radius: 3px;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-transform: capitalize;
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 3.125rem;
+    text-transform: capitalize;
+  }
+
+  .container {
+    padding: 0 30px;
+  }
+
+  .result {
+    padding: 15px;
+  }
+}
