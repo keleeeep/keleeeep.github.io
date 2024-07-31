@@ -1,6 +1,6 @@
 const resultElementAct3 = document.getElementById('resultAct3');
 const startBtnAct3 = document.getElementById('startBtnAct3');
-const stopBtnAct3A= document.getElementById('stopBtnAct3');
+const stopBtnAct3= document.getElementById('stopBtnAct3');
 
 startBtnAct3.addEventListener('click', startRecordingAct3);
 stopBtnAct3.addEventListener('click', stopRecordingAct3);

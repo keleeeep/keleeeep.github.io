@@ -1,6 +1,6 @@
 const resultElementAct5 = document.getElementById('resultAct5');
 const startBtnAct5 = document.getElementById('startBtnAct5');
-const stopBtnAct5A= document.getElementById('stopBtnAct5');
+const stopBtnAct5 = document.getElementById('stopBtnAct5');
 
 startBtnAct5.addEventListener('click', startRecordingAct5);
 stopBtnAct5.addEventListener('click', stopRecordingAct5);
@@ -10,7 +10,7 @@ let recognitionAct5 = window.SpeechRecognition || window.webkitSpeechRecognition
 if (recognitionAct5) {
   recognitionAct5 = new recognitionAct5();
   recognitionAct5.continuous = true;
-  recognitionAct5.interimResults = false;
+  recognitionAct5.interimResults = true;
   recognitionAct5.lang = 'id-ID';
 
   recognitionAct5.onstart = () => {
@@ -30,9 +30,7 @@ if (recognitionAct5) {
       }
     }
 
-    finalResultAct5 = resultElementAct5.innerText + resultAct5
-
-    resultElementAct5.innerText = finalResultAct5 + '\n';
+    resultElementAct5.innerText = resultAct5;
 
     if (resultAct5.toLowerCase().includes('stop recording')) {
       resultElementAct5.innerText = resultAct5.replace(/stop recording/gi, '');
@@ -56,6 +54,7 @@ if (recognitionAct5) {
 }
 
 function startRecordingAct5() {
+  resultElementAct5.innerText = '';
   recognitionAct5.start();
 }
 
@@ -63,5 +62,4 @@ function stopRecordingAct5() {
   if (recognitionAct5) {
     recognitionAct5.stop();
   }
-  resultElementAct5.innerText = '';
 }

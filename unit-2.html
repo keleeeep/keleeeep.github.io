@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kokel Technology</title>
+    <link rel="shortcut icon" type="image/png" href="" />
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/essentials.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <h3 class="mb-0 text-black opacity-9">Bahan Ajar Fonologi</h3>
+        <button class="navbar-toggler" id="solidColor" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-black" href="index.html">Beranda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-black" href="introduction.html">Pendahuluan</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-black" href="guideline.html">Petunjuk</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-black" href="material.html">Materi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-black" href="about.html">Tentang</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div>
+        <img src="assets/images/unit-2/Cover.png" alt="unit 1 cover" class="unit-cover">
+    </div>
+    <section id="unit-1">
+        <div class="container mt-100">
+            <div id="activity-1">
+                <div>
+                    <h3 class="text-left mb-20">
+                        A. Kosakata Tentang Pekerjaan
+                    </h3>
+                    <h4 class="text-left">
+                        Kegiatan 1. Simak dan pahami pelafalan kosakata berikut!
+                    </h4>
+                </div>
+                <img class="w-30 audio-unit mb-20" src="assets/images/icon/speaker-filled-audio-tool.png" alt="audio" onclick="act11()">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img style="width: 100%;" src="assets/images/unit-2/Gambar 1. Kosakata.png" alt="">
+                    </div>
+                    <div class="col-md-6">
+                        <img style="width: 100%;" src="assets/images/unit-2/Gambar 2. Kosakata.png" alt="">
+                    </div>
+                </div>
+                <div class="mt-20">
+                    <h4 class="text-left">
+                        Kegiatan 2. Ikuti pelafalan kosakata di atas!
+                    </h4>
+                    <div class="btn-wrapper">
+                        <button id="startBtnAct1" class="btn btn-primary mr-20">
+                          <span> Start Recording </span>
+                        </button>
+                        <button id="stopBtnAct1" class="btn btn-secondary" disabled>Stop Recording</button>
+                      </div>
+                      <div id="resultAct1" class="result"></div>
+                </div>
+            </div>
+            <div id="activity-2">
+                <div class="mt-50">
+                    <h3 class="text-left mb-20">
+                        B. Pasangan Minimal
+                    </h3>
+                    <h4 class="text-left">
+                        Kegiatan 1. Simak dan pahami perbedaan bunyi pada pelafalan kosakata berikut!
+                    </h4>
+                </div>
+                <div class="row">
+                    <table>
+                        <tr>
+                            <td>
+                                <img class="w-30 audio-unit mr-20" src="assets/images/icon/speaker-filled-audio-tool.png" alt="audio" onclick="act21()">
+                            </td>
+                            <td class="pr-20">
+                                <img src="assets/images/unit-2/Pasangan Minimal. Gambar 1-Kaki.png" alt="">
+                            </td>
+                            <td>
+                                <img src="assets/images/unit-2/Pasangan Minimal. Gambar 2. Koki.png" alt="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="w-30 audio-unit mr-20" src="assets/images/icon/speaker-filled-audio-tool.png" alt="audio" onclick="act22()">
+                            </td>
+                            <td class="pr-20">
+                                <img src="assets/images/unit-2/Pasangan Minimal. Gambar 3. Sipir.png" alt="">
+                            </td>
+                            <td>
+                                <img src="assets/images/unit-2/Pasangan Minimal. Gambar 4. Supir.png" alt="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="w-30 audio-unit mr-20" src="assets/images/icon/speaker-filled-audio-tool.png" alt="audio" onclick="act23()">
+                            </td>
+                            <td class="pr-20">
+                                <img src="assets/images/unit-2/Pasangan Minimal. Gambar 5. Penari.png" alt="">
+                            </td>
+                            <td>
+                                <img src="assets/images/unit-2/Pasangan Minimal. Gambar 6. Kenari.png" alt="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="w-30 audio-unit mr-20" src="assets/images/icon/speaker-filled-audio-tool.png" alt="audio" onclick="act24()">
+                            </td>
+                            <td class="pr-20">
+                                <img src="assets/images/unit-2/Pasangan Minimal. Gambar 7. Nelayan.png" alt="">
+                            </td>
+                            <td>
+                                <img src="assets/images/unit-2/Pasangan Minimal. Gambar 8.Nelayan.png" alt="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="w-30 audio-unit mr-20" src="assets/images/icon/speaker-filled-audio-tool.png" alt="audio" onclick="act25()">
+                            </td>
+                            <td class="pr-20">
+                                <img src="assets/images/unit-2/Pasangan Minimal. Gambar 9. Penjahat.png" alt="">
+                            </td>
+                            <td>
+                                <img src="assets/images/unit-2/Pasangan Minimal. Gambar 10. Penjahat.png" alt="">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="mt-20">
+                    <h4 class="text-left">
+                        Kegiatan 2. Ikuti pelafalan kosakata di atas!
+                    </h4>
+                    <div class="btn-wrapper">
+                        <button id="startBtnAct2" class="btn btn-primary mr-20">
+                          <span> Start Recording </span>
+                        </button>
+                        <button id="stopBtnAct2" class="btn btn-secondary" disabled>Stop Recording</button>
+                      </div>
+                      <div id="resultAct2" class="result"></div>
+                </div>
+            </div>
+            <div id="activity-3">
+                <div class="mt-50">
+                    <h3 class="text-left mb-20">
+                        C. Kalimat <i>Tongue twister</i>
+                    </h3>
+                    <h4 class="text-left">
+                        Kegiatan 1. Simak dan ikuti pelafalan kalimat <i>tongue twister</i> berikut!
+                    </h4>
+                    <ol type="1">
+                        <li>Kuku kaki koki kaku-kaku <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="" onclick="act31()"></li>
+                        <li>Penari tak kenali pohon kenari <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="" onclick="act32()"></li>
+                    </ol>
+                </div>
+                <div class="mt-20">
+                    <h4 class="text-left">
+                        Kegiatan 2. Ikuti pelafalan kalimat <i>tongue twister</i> di atas!
+                        <br>위 문장의 발음을 따라해보세요
+                    </h4>
+                    <div class="btn-wrapper">
+                        <button id="startBtnAct3" class="btn btn-primary mr-20">
+                          <span> Start Recording </span>
+                        </button>
+                        <button id="stopBtnAct3" class="btn btn-secondary" disabled>Stop Recording</button>
+                      </div>
+                      <div id="resultAct3" class="result"></div>
+                </div>
+            </div>
+            <div id="activity-4">
+                <div class="mt-50 mb-50">
+                    <h3 class="text-left mb-20">
+                        D. Kalimat Sederhana Tentang Pekerjaan
+                    </h3>
+                    <h4 class="text-left">
+                        Kegiatan 1. Simak dan pahami kalimat berikut!
+                    </h4>
+                    <ol type="1">
+                        <li>Ibuku adalah seorang guru. <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="" onclick="act41()"></li>
+                        <li>Ayah Budi bekerja di luar negeri. <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="" onclick="act42()"></li>
+                        <li>Salis pergi ke kebun untuk bertani. <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="" onclick="act43()"></li>
+                        <li>Kakak laki-laki ibu adalah seorang pilot. <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="" onclick="act44()"></li>
+                        <li>Kakek Rika adalah sipir dan ayahnya seorang supir. <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="" onclick="act45()"></li>
+                        <li>Nelayan bekerja di laut dari pagi hingga sore hari. <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="" onclick="act46()"></li>
+                    </ol>
+                </div>
+                <div class="mt-20">
+                    <h4 class="text-left">
+                        Kegiatan 2. Ikuti pelafalan kalimat di atas!
+                        <br>위 문장의 발음을 따라해보세요
+                    </h4>
+                    <div class="btn-wrapper">
+                        <button id="startBtnAct4" class="btn btn-primary mr-20">
+                          <span> Start Recording </span>
+                        </button>
+                        <button id="stopBtnAct4" class="btn btn-secondary" disabled>Stop Recording</button>
+                      </div>
+                      <div id="resultAct4" class="result"></div>
+                </div>
+            </div>
+            <div id="activity-5">
+                <div class="mt-50 mb-50">
+                    <h3 class="text-left mb-20">
+                        E. Kalimat Kompleks Tentang Pekerjaan
+                    </h3>
+                    <h4 class="text-left">
+                        Kegiatan 1. Simak dan pahami kalimat berikut!
+                    </h4>
+                    <ol type="1">
+                        <li>Rudi dan Luli akan bertemu guru di hari buruh untuk berdiskusi tentang tugas. <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="" onclick="act51()"></li>
+                        <li>Ayah Budi yang bekerja di luar negeri, mengirimkan hadiah kepada keluarganya di
+                            hari raya karena, tidak bisa pulang. <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="" onclick="act52()"></li>
+                        <li>Seorang petani menanam pohon pisang di kebun untuk memenuhi kebutuhan
+                            keluarganya. <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="" onclick="act53()"></li>
+                        <li>Setiap hari kakak bekerja 8 jam dalam sehari dan setelah pulang bekerja kakak akan
+                            belajar Bahasa Inggris selama 2 jam. <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="" onclick="act54()"></li>
+                    </ol>
+                </div>
+                <div class="mt-20">
+                    <h4 class="text-left">
+                        Kegiatan 2. Ikuti pelafalan kalimat di atas!
+                    </h4>
+                    <div class="btn-wrapper">
+                        <button id="startBtnAct5" class="btn btn-primary mr-20">
+                          <span> Start Recording </span>
+                        </button>
+                        <button id="stopBtnAct5" class="btn btn-secondary" disabled>Stop Recording</button>
+                      </div>
+                      <div id="resultAct5" class="result"></div>
+                </div>
+            </div>
+            <div id="activity-6">
+                <div class="mt-50 mb-50">
+                    <h3 class="text-left mb-20">
+                        F. Percakapan Sederhana Tentang Pekerjaan
+                    </h3>
+                    <h4 class="text-left">
+                        Kegiatan 1. Simak dan pahami percakapan berikut!
+                    </h4>
+                    <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="" onclick="act61()">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>Anna</td>
+                                <td>: Hai, apa kabar Rudi? Nama saya Anna.</td>
+                            </tr>
+                            <tr>
+                                <td>Rudi</td>
+                                <td>: Hai Anna, Kabar saya baik. Anda bekerja di mana?</td>
+                            </tr>
+                            <tr>
+                                <td>Anna</td>
+                                <td>: Saya bekerja sebagai guru di SD Isola. Apa pekerjaan Anda?</td>
+                            </tr>
+                            <tr>
+                                <td>Rudi</td>
+                                <td>: Pekerjaan saya adalah perawat.</td>
+                            </tr>
+                            <tr>
+                                <td>Anna</td>
+                                <td>: Wah, menarik. Di mana Anda bekerja?</td>
+                            </tr>
+                            <tr>
+                                <td>Rudi</td>
+                                <td>: Saya bekerja di rumah sakit Kasih Ibu.</td>
+                            </tr>
+                            <tr>
+                                <td>Anna</td>
+                                <td>: Itu dekat dengan rumah saya.Saya harus pergi sekarang. Sampai jumpa
+                                    Rudi.</td>
+                            </tr>
+                            <tr>
+                                <td>Rudi</td>
+                                <td>: Sampai jumpa Anna.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mt-20 mb-50">
+                    <h4 class="text-left">
+                        Kegiatan 2. Tiru percakapan di atas bersama teman atau guru Anda dan ubahlah sesuai pengalaman Anda!
+                    </h4>
+                    <div class="btn-wrapper">
+                        <button id="startBtnAct6" class="btn btn-primary mr-20">
+                          <span> Start Recording </span>
+                        </button>
+                        <button id="stopBtnAct6" class="btn btn-secondary" disabled>Stop Recording</button>
+                      </div>
+                      <div id="resultAct6" class="result"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://kit.fontawesome.com/3bc2e700df.js"></script>
+    <script src="<assets/js/jquery-3.5.1.min.js"></script>
+    <script src="<assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+
+    <script>
+        // Activity - 1
+        function act11(){
+            var music = new Audio('assets/audio/Unit 2/Unit 2. A.m4a');
+            music.play();
+        }
+
+        // Activity - 2
+        function act21(){
+            var music = new Audio('assets/audio/Unit 2/Unit 2. B. 1. Kaki-Koki.m4a');
+            music.play();
+        }
+        function act22(){
+            var music = new Audio('assets/audio/Unit 2/Unit 2. B. 2. Sipir-Sopir.m4a');
+            music.play();
+        }
+        function act23(){
+            var music = new Audio('assets/audio/Unit 2/Unit 2. B. 3.Penari-Kenari.m4a');
+            music.play();
+        }
+        function act24(){
+            var music = new Audio('assets/audio/Unit 2/Unit 2. B. 4. Nelayan-Pelayan.m4a');
+            music.play();
+        }
+        function act25(){
+            var music = new Audio('assets/audio/Unit 2/Unit 2. B. 5.Penjahat-Penjahit.m4a');
+            music.play();
+        }
+
+        // Activity - 3
+        function act31(){
+            var music = new Audio('assets/audio/Unit 2/Unit 2. C. 1.m4a');
+            music.play();
+        }
+        function act32(){
+            var music = new Audio('assets/audio/Unit 2/Unit 2. C. 2.m4a');
+            music.play();
+        }
+
+        // Activity - 4
+        function act41(){
+            var music = new Audio('assets/audio/Unit 1/Unit 1.D. 1.m4a');
+            music.play();
+        }
+        function act42(){
+            var music = new Audio('assets/audio/Unit 1/Unit 1.D. 2.m4a');
+            music.play();
+        }
+        function act43(){
+            var music = new Audio('assets/audio/Unit 1/Unit 1.D. 3.m4a');
+            music.play();
+        }
+        function act44(){
+            var music = new Audio('assets/audio/Unit 1/Unit 1.D. 4.m4a');
+            music.play();
+        }
+        function act45(){
+            var music = new Audio('assets/audio/Unit 1/Unit 1.D. 5.m4a');
+            music.play();
+        }
+
+        // Activity - 5
+        function act51(){
+            var music = new Audio('assets/audio/Unit 2/Unit 2. E. 1.m4a');
+            music.play();
+        }
+        function act52(){
+            var music = new Audio('assets/audio/Unit 2/Unit 2. E. 2.m4a');
+            music.play();
+        }
+        function act53(){
+            var music = new Audio('assets/audio/Unit 2/Unit 2. E. 3.m4a');
+            music.play();
+        }
+        function act54(){
+            var music = new Audio('assets/audio/Unit 2/Unit 2. E.4.m4a');
+            music.play();
+        }
+
+        // Activity - 6
+        function act61(){
+            var music = new Audio('assets/audio/Unit 2/Unit 2. F.m4a');
+            music.play();
+        }
+    </script>
+
+    <script src="assets/js/speech-to-text-act-1.js"></script>
+    <script src="assets/js/speech-to-text-act-2.js"></script>
+    <script src="assets/js/speech-to-text-act-3.js"></script>
+    <script src="assets/js/speech-to-text-act-4.js"></script>
+    <script src="assets/js/speech-to-text-act-5.js"></script>
+    <script src="assets/js/speech-to-text-act-6.js"></script>
+</body>
+
+</html>
