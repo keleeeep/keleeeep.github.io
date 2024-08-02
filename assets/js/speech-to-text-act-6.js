@@ -10,7 +10,7 @@ let recognitionAct6 = window.SpeechRecognition || window.webkitSpeechRecognition
 if (recognitionAct6) {
   recognitionAct6 = new recognitionAct6();
   recognitionAct6.continuous = true;
-  recognitionAct6.interimResults = false;
+  recognitionAct6.interimResults = true;
   recognitionAct6.lang = 'id-ID';
 
   recognitionAct6.onstart = () => {
@@ -30,9 +30,7 @@ if (recognitionAct6) {
       }
     }
 
-    finalResultAct6 = resultElementAct6.innerText + resultAct6
-
-    resultElementAct6.innerText = finalResultAct6 + '\n';
+    resultElementAct6.innerText = resultAct6;
 
     if (resultAct6.toLowerCase().includes('stop recording')) {
       resultElementAct6.innerText = resultAct6.replace(/stop recording/gi, '');
@@ -56,8 +54,8 @@ if (recognitionAct6) {
 }
 
 function startRecordingAct6() {
-  recognitionAct6.start();
   resultElementAct6.innerText = '';
+  recognitionAct6.start();
 }
 
 function stopRecordingAct6() {

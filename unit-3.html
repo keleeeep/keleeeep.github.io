@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kokel Technology</title>
+    <link rel="shortcut icon" type="image/png" href="" />
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/essentials.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <h3 class="mb-0 text-black opacity-9">Bahan Ajar Fonologi</h3>
+        <button class="navbar-toggler" id="solidColor" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-black" href="index.html">Beranda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-black" href="introduction.html">Pendahuluan</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-black" href="guideline.html">Petunjuk</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-black" href="material.html">Materi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-black" href="about.html">Tentang</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div>
+        <img src="assets/images/unit-3/Cover.png" alt="unit 1 cover" class="unit-cover">
+    </div>
+    <section id="unit-3">
+        <div class="container mt-100">
+            <div id="activity-1">
+                <div>
+                    <h3 class="text-left mb-20">
+                        A. Kosakata Hari dan Tanggal		요일과 날짜 어휘
+                    </h3>
+                    <h4 class="text-left">
+                        Kegiatan 1. Simak dan pahami angka berikut!
+                    </h4>
+                </div>
+                <img class="w-30 audio-unit mb-20" src="assets/images/icon/speaker-filled-audio-tool.png" alt="audio" onclick="act11()">
+                <table class="table table-bordered w-500">
+                    <tbody>
+                        <tr>
+                            <td style="width: 10%;">1</td>
+                            <td style="width: 40%;">Satu</td>
+                            <td style="width: 10%;">11</td>
+                            <td style="width: 40%;">Sebelas</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Dua</td>
+                            <td>12</td>
+                            <td>Dua belas</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Tiga</td>
+                            <td>20</td>
+                            <td>Dua puluh</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Empat</td>
+                            <td>31</td>
+                            <td>Tiga puluh satu</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Empat</td>
+                            <td>31</td>
+                            <td>Tiga puluh satu</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Lima</td>
+                            <td>50</td>
+                            <td>Lima puluh</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Enam</td>
+                            <td>100</td>
+                            <td>Seratus</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Tujuh</td>
+                            <td>1.000</td>
+                            <td>Seribu</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Delapan</td>
+                            <td>10.000</td>
+                            <td>Sepuluh ribu</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Sembilan</td>
+                            <td>100.000</td>
+                            <td>Seratus ribu</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Sepuluh</td>
+                            <td>1.000.000</td>
+                            <td>Satu juta</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="mt-20">
+                    <h4 class="text-left">
+                        Kegiatan 2. Ikuti pelafalan kosakata di atas!
+                    </h4>
+                    <div class="btn-wrapper">
+                        <button id="startBtnAct1" class="btn btn-primary mr-20">
+                            <span> Start Recording </span>
+                        </button>
+                        <button id="stopBtnAct1" class="btn btn-secondary" disabled>Stop Recording</button>
+                    </div>
+                    <div id="resultAct1" class="result"></div>
+                </div>
+                <div class="mt-20">
+                    <h4 class="text-left">
+                        Kegiatan 3. Simak dan pahami nama hari berikut!
+                    </h4>
+                    <img class="w-30 audio-unit mb-20" src="assets/images/icon/speaker-filled-audio-tool.png" alt="audio" onclick="act21()">
+                    <table class="table table-bordered w-300">
+                        <tbody>
+                            <tr>
+                                <td>Senin</td>
+                                <td>월요일</td>
+                            </tr>
+                            <tr>
+                                <td>Selasa</td>
+                                <td>화요일</td>
+                            </tr>
+                            <tr>
+                                <td>Rabu</td>
+                                <td>수요일</td>
+                            </tr>
+                            <tr>
+                                <td>Kamis</td>
+                                <td>목요일</td>
+                            </tr>
+                            <tr>
+                                <td>Jumat</td>
+                                <td>금요일</td>
+                            </tr>
+                            <tr>
+                                <td>Sabtu</td>
+                                <td>토요일</td>
+                            </tr>
+                            <tr>
+                                <td>Minggu</td>
+                                <td>일요일</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mt-20">
+                    <h4 class="text-left">
+                        Kegiatan 4. Ikuti pelafalan kosakata di atas!
+                    </h4>
+                    <div class="btn-wrapper">
+                        <button id="startBtnAct2" class="btn btn-primary mr-20">
+                            <span> Start Recording </span>
+                        </button>
+                        <button id="stopBtnAct2" class="btn btn-secondary" disabled>Stop Recording</button>
+                    </div>
+                    <div id="resultAct2" class="result"></div>
+                </div>
+                <div class="mt-20">
+                    <h4 class="text-left">
+                        Kegiatan 5. Simak dan pahami nama bulan berikut!
+                    </h4>
+                    <img class="w-30 audio-unit mb-20" src="assets/images/icon/speaker-filled-audio-tool.png" alt="audio" onclick="act31()">
+                    <table class="table table-bordered w-400">
+                        <tbody>
+                            <tr>
+                                <td>JANUARI</td>
+                                <td>FEBRUARI</td>
+                                <td>MARET</td>
+                            </tr>
+                            <tr>
+                                <td>APRIL</td>
+                                <td>MEI</td>
+                                <td>JUNI</td>
+                            </tr>
+                            <tr>
+                                <td>JULI</td>
+                                <td>AGUSTUS</td>
+                                <td>SEPTEMBER</td>
+                            </tr>
+                            <tr>
+                                <td>OKTOBER</td>
+                                <td>NOVEMBER</td>
+                                <td>DESEMBER</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mt-20">
+                    <h4 class="text-left">
+                        Kegiatan 6. Ikuti pelafalan kosakata di atas!
+                    </h4>
+                    <div class="btn-wrapper">
+                        <button id="startBtnAct3" class="btn btn-primary mr-20">
+                            <span> Start Recording </span>
+                        </button>
+                        <button id="stopBtnAct3" class="btn btn-secondary" disabled>Stop Recording</button>
+                    </div>
+                    <div id="resultAct3" class="result"></div>
+                </div>
+                <div class="mt-20">
+                    <h4 class="text-left">
+                        Kegiatan 7. Simak dan pahami kosakata berikut ini!
+                    </h4>
+                    <img class="w-30 audio-unit mb-20" src="assets/images/icon/speaker-filled-audio-tool.png" alt="audio" onclick="act41()">
+                    <table class="table table-bordered w-300">
+                        <tbody>
+                            <tr>
+                                <td>Tahun</td>
+                                <td>년</td>
+                            </tr>
+                            <tr>
+                                <td>Bulan</td>
+                                <td>월</td>
+                            </tr>
+                            <tr>
+                                <td>Hari</td>
+                                <td>일</td>
+                            </tr>
+                            <tr>
+                                <td>Tanggal</td>
+                                <td>날짜</td>
+                            </tr>
+                            <tr>
+                                <td>Kemarin</td>
+                                <td>어제</td>
+                            </tr>
+                            <tr>
+                                <td>Hari ini</td>
+                                <td>오늘</td>
+                            </tr>
+                            <tr>
+                                <td>Besok</td>
+                                <td>내일</td>
+                            </tr>
+                            <tr>
+                                <td>Lusa</td>
+                                <td>모레</td>
+                            </tr>
+                            <tr>
+                                <td>Sekarang</td>
+                                <td>지금</td>
+                            </tr>
+                            <tr>
+                                <td>Nanti</td>
+                                <td>나중에</td>
+                            </tr>
+                            <tr>
+                                <td>Akhir pekan</td>
+                                <td>주말</td>
+                            </tr>
+                            <tr>
+                                <td>Minggu lalu</td>
+                                <td>지난 주</td>
+                            </tr>
+                            <tr>
+                                <td>Minggu ini</td>
+                                <td>이번 주</td>
+                            </tr>
+                            <tr>
+                                <td>Minggu depan</td>
+                                <td>다음 주</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mt-20">
+                    <h4 class="text-left">
+                        Kegiatan 6. Ikuti pelafalan kosakata di atas!
+                    </h4>
+                    <div class="btn-wrapper">
+                        <button id="startBtnAct4" class="btn btn-primary mr-20">
+                            <span> Start Recording </span>
+                        </button>
+                        <button id="stopBtnAct4" class="btn btn-secondary" disabled>Stop Recording</button>
+                    </div>
+                    <div id="resultAct4" class="result"></div>
+                </div>
+            </div>
+            <div id="activity-2">
+                <div class="mt-50">
+                    <h3 class="text-left mb-20">
+                        B. Pasangan Minimal
+                    </h3>
+                    <h4 class="text-left">
+                        Kegiatan 1. Simak dan pahami perbedaan bunyi pada pelafalan kosakata berikut!
+                    </h4>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <table class="table table-bordered">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="audio" onclick="act51()">
+                                    </td>
+                                    <td>
+                                        <img src="assets/images/unit-3/Gambar 1. Lalu.png" alt="">
+                                    </td>
+                                    <td>
+                                        <img src="assets/images/unit-3/Gambar 2. Layu.png" alt="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="audio" onclick="act52()">
+                                    </td>
+                                    <td>
+                                        <img src="assets/images/unit-3/Gambar 3. Labu.png" alt="">
+                                    </td>
+                                    <td>
+                                        <img src="assets/images/unit-3/Gambar 4. Rabu.png" alt="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="audio" onclick="act53()">
+                                    </td>
+                                    <td>
+                                        <img src="assets/images/unit-3/Gambar 5. Hari.png" alt="">
+                                    </td>
+                                    <td>
+                                        <img src="assets/images/unit-3/Gambar 6. Dari.png" alt="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="audio" onclick="act54()">
+                                    </td>
+                                    <td>
+                                        <img src="assets/images/unit-3/Gambar 7. Tahan.png" alt="">
+                                    </td>
+                                    <td>
+                                        <img src="assets/images/unit-3/Gambar 8. Tahun.png" alt="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="audio" onclick="act55()">
+                                    </td>
+                                    <td>
+                                        <img src="assets/images/unit-3/Gambar 9. Kamis.png" alt="">
+                                    </td>
+                                    <td>
+                                        <img src="assets/images/unit-3/Gambar 10. Kumis.png" alt="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="audio" onclick="act56()">
+                                    </td>
+                                    <td>
+                                        <img src="assets/images/unit-3/Gambar 11. Tanggal.png" alt="">
+                                    </td>
+                                    <td>
+                                        <img src="assets/images/unit-3/Gambar 12. Tinggal.png" alt="">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="mt-20">
+                    <h4 class="text-left">
+                        Kegiatan 2. Ikuti pelafalan kosakata di atas!
+                    </h4>
+                    <div class="btn-wrapper">
+                        <button id="startBtnAct5" class="btn btn-primary mr-20">
+                          <span> Start Recording </span>
+                        </button>
+                        <button id="stopBtnAct5" class="btn btn-secondary" disabled>Stop Recording</button>
+                      </div>
+                      <div id="resultAct5" class="result"></div>
+                </div>
+            </div>
+            <div id="activity-3">
+                <div class="mt-50 mb-50">
+                    <h3 class="text-left mb-20">
+                        C. Kalimat Sederhana Mengenai Hari dan Tanggal
+                    </h3>
+                    <h4 class="text-left">
+                        Kegiatan 1. Simak dan pahami kalimat berikut!
+                    </h4>
+                    <ol type="1">
+                        <li>Saya lahir pada tanggal 12 Juni.  <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="" onclick="act61()"></li>
+                        <li>Saya akan tiba pada hari Rabu.  <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="" onclick="act62()"></li>
+                        <li>Mereka akan pergi minggu depan. <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="" onclick="act63()"></li>
+                        <li>Toko itu tutup tahun lalu. <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="" onclick="act64()"></li>
+                        <li>16 Juni 2024 adalah hari minggu. <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="" onclick="act65()"></li>
+                    </ol>
+                </div>
+                <div class="mt-20">
+                    <h4 class="text-left">
+                        Kegiatan 2. Ikuti pelafalan kalimat di atas!
+                    </h4>
+                    <div class="btn-wrapper">
+                        <button id="startBtnAct6" class="btn btn-primary mr-20">
+                          <span> Start Recording </span>
+                        </button>
+                        <button id="stopBtnAct6" class="btn btn-secondary" disabled>Stop Recording</button>
+                      </div>
+                      <div id="resultAct6" class="result"></div>
+                </div>
+            </div>
+            <div id="activity-4">
+                <div class="mt-50 mb-50">
+                    <h3 class="text-left mb-20">
+                        D. Kalimat Kompleks Mengenai Hari Dan Tanggal
+                    </h3>
+                    <h4 class="text-left">
+                        Kegiatan 1. Simak dan pahami kalimat berikut!
+                    </h4>
+                    <ol type="1">
+                        <li>Kami akan pergi liburan ke Korea tahun depan, pada tanggal 12 November 2025.  <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="" onclick="act71()"></li>
+                        <li>Indonesia merdeka tanggal 17 Agustus 1945 dan diperingati setiap tahun.  <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="" onclick="act72()"></li>
+                        <li>Korea Selatan merdeka 2 hari sebelum Indonesia, yaitu pada tanggal 15 Agustus 1945. <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="" onclick="act73()"></li>
+                        <li>Hari ini adalah hari rabu, besok adalah hari kamis, dan dua hari lagi adalah hari sabtu. <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="" onclick="act74()"></li>
+                        <li>Pada hari Jumat, 5 November tahun lalu, saya bertemu dengan teman-teman lama di kafe langganan kami. <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="" onclick="act75()"></li>
+                    </ol>
+                </div>
+                <div class="mt-20 mb-50">
+                    <h4 class="text-left">
+                        Kegiatan 2. Ikuti pelafalan kalimat di atas!
+                    </h4>
+                    <div class="btn-wrapper">
+                        <button id="startBtnAct7" class="btn btn-primary mr-20">
+                          <span> Start Recording </span>
+                        </button>
+                        <button id="stopBtnAct7" class="btn btn-secondary" disabled>Stop Recording</button>
+                      </div>
+                      <div id="resultAct7" class="result"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://kit.fontawesome.com/3bc2e700df.js"></script>
+    <script src="<assets/js/jquery-3.5.1.min.js"></script>
+    <script src="<assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+
+    <script>
+        Activity - 1
+        function act11(){
+            var music = new Audio('assets/audio/Unit 3/Unit 3. A. 1. Angka.m4a');
+            music.play();
+        }
+
+        // Activity - 2
+        function act21(){
+            var music = new Audio('assets/audio/Unit 3/Unit 3. A. 2. Nama Hari.m4a');
+            music.play();
+        }
+
+        // Activity - 3
+        function act31(){
+            var music = new Audio('assets/audio/Unit 3/Unit 3. A. 3. Nama Tahun.m4a');
+            music.play();
+        }
+
+        // Activity - 4
+        function act41(){
+            var music = new Audio('assets/audio/Unit 3/Unit 3. A. 4. Kosakata.m4a');
+            music.play();
+        }
+
+        // Activity - 5
+        function act51(){
+            var music = new Audio('assets/audio/Unit 3/Unit 3. B. 1. Lalu-Layu.m4a');
+            music.play();
+        }
+        function act52(){
+            var music = new Audio('assets/audio/Unit 3/Unit 3. B. 2. Labu-Rabu.m4a');
+            music.play();
+        }
+        function act53(){
+            var music = new Audio('assets/audio/Unit 3/Unit 3. B. 3. Hari-Dari.m4a');
+            music.play();
+        }
+        function act54(){
+            var music = new Audio('assets/audio/Unit 3/Unit 3. B. 4. Tahan-Tahun.m4a');
+            music.play();
+        }
+        function act55(){
+            var music = new Audio('assets/audio/Unit 3/Unit 3. B. 5. Kamis-Kumis.m4a');
+            music.play();
+        }
+        function act56(){
+            var music = new Audio('assets/audio/Unit 3/Unit 3. B. 6. Tanggal-Tinggal.m4a');
+            music.play();
+        }
+
+        // Activity - 6
+        function act61(){
+            var music = new Audio('assets/audio/Unit 3/Unit 3. C. 1.m4a');
+            music.play();
+        }
+        function act62(){
+            var music = new Audio('assets/audio/Unit 3/Unit 3. C. 2.m4a');
+            music.play();
+        }
+        function act63(){
+            var music = new Audio('assets/audio/Unit 3/Unit 3. C. 3.m4a');
+            music.play();
+        }
+        function act64(){
+            var music = new Audio('assets/audio/Unit 3/Unit 3. C. 4.m4a');
+            music.play();
+        }
+        function act65(){
+            var music = new Audio('assets/audio/Unit 3/Unit 3. C. 5.m4a');
+            music.play();
+        }
+
+        // Activity - 7
+        function act71(){
+            var music = new Audio('assets/audio/Unit 3/Unit 3. D. 1.m4a');
+            music.play();
+        }
+        function act72(){
+            var music = new Audio('assets/audio/Unit 3/Unit 3. D. 2.m4a');
+            music.play();
+        }
+        function act73(){
+            var music = new Audio('assets/audio/Unit 3/Unit 3. D. 3.m4a');
+            music.play();
+        }
+        function act74(){
+            var music = new Audio('assets/audio/Unit 3/Unit 3. D. 4.m4a');
+            music.play();
+        }
+        function act75(){
+            var music = new Audio('assets/audio/Unit 3/Unit 3. D. 5.m4a');
+            music.play();
+        }
+    </script>
+
+    <script src="assets/js/speech-to-text-act-2.js"></script>
+    <script src="assets/js/speech-to-text-act-3.js"></script>
+    <script src="assets/js/speech-to-text-act-4.js"></script>
+    <script src="assets/js/speech-to-text-act-6.js"></script>
+</body>
+
+</html>
