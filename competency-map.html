@@ -13,72 +13,67 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <h3 class="mb-0 text-black opacity-9">Bahan Ajar Fonologi</h3>
+        <h3 class="mb-0 text-black opacity-9" id="navTitle"></h3>
         <button class="navbar-toggler" id="solidColor" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link text-black" href="index.html">Beranda</a>
+                    <a class="nav-link text-black" href="index.html" id="home"></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-black" href="introduction.html">Pendahuluan</a>
+                    <a class="nav-link text-black" href="introduction.html" id="introduction"></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-black" href="guideline.html">Petunjuk</a>
+                    <a class="nav-link text-black" href="guideline.html" id="guideline"></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-black" href="material.html">Materi</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-black" href="about.html">Tentang</a>
+                    <a class="nav-link text-black" href="about.html" id="about"></a>
                 </li>
             </ul>
         </div>
     </nav>
     <section id="about">
         <div class="container mt-100">
-            <h1 class="text-center">Peta Kompetensi</h1>
+            <div class="mt-120 pl-0 ml-0">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Pilih Bahasa
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#" onclick="setLanguage('id')"><img class="w-20" src="assets/images/icon/indonesia.png" alt=""> Indonesia</a>
+                      <a class="dropdown-item" href="#" onclick="setLanguage('ko')"><img class="w-20" src="assets/images/icon/south-korea.png" alt=""> Korea</a>
+                    </div>
+                  </div>
+            </div>
+            <h1 class="text-center" id="competencyMapTitle"></h1>
             <table class="table table-bordered">
                 <thead>
                   <tr>
-                    <th scope="col">Kompetensi</th>
-                    <th scope="col">Capaian Pembelajaran</th>
+                    <th scope="col" id="competencyMapTable1"></th>
+                    <th scope="col" id="competencyMapTable2"></th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>
-                        Menguasai pengetahuan tentang penggunaan bunyi bahasa dan pelafalan. 
-                    </td>
+                    <td id="competencyMapTable3"></td>
                     <td>
                         <ol type="1">
-                            <li>
-                                Mengenal alat ucap dan cara alat ucap menghasilkan bunyi. 
-                            </li>
-                            <li>
-                                Mampu melafalkan huruf vokal, konsonan, diftong, dan gabungan 
-                                konsonan dalam bahasa Indonesia dengan tepat dalam konteks kehidupan 
-                                sehari-hari.
-                            </li>
+                            <li id="competencyMapTable4"></li>
+                            <li id="competencyMapTable5"></li>
                         </ol>
                     </td>
                   </tr>
                   <tr>
-                    <td>
-                        Menguasai penggunaan fonem dalam konteks komunikatif
-                    </td>
+                    <td id="competencyMapTable6"></td>
                     <td>
                         <ol type="1">
-                            <li>
-                                Memahami bagaimana variasi fonem dapat mempengaruhi 
-                                makna kata dan pengertian dalam komunikasi sehari-hari.
-                            </li>
-                            <li>
-                                Mampu membedakan bunyi dan makna fonem-fonem yang mirip dalam 
-                                konteks percakapan nyata.
-                            </li>
+                            <li id="competencyMapTable7"></li>
+                            <li id="competencyMapTable8"></li>
                         </ol>
                     </td>
                   </tr>
@@ -87,10 +82,31 @@
         </div>
     </section>
 
-    <script src="https://kit.fontawesome.com/3bc2e700df.js"></script>
-    <script src="<assets/js/jquery-3.5.1.min.js"></script>
-    <script src="<assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/localize.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+
+    <script>
+        function updateContent(translations) {
+            document.getElementById('navTitle').innerText = translations.navTitle;
+            document.getElementById('home').innerText = translations.home;
+            document.getElementById('introduction').innerText = translations.introduction;
+            document.getElementById('guideline').innerText = translations.guideline;
+            document.getElementById('about').innerText = translations.about;
+            
+            
+            document.getElementById('competencyMapTitle').innerText = translations.competencyMapTitle;
+            document.getElementById('competencyMapTable1').innerText = translations.competencyMapTable1;
+            document.getElementById('competencyMapTable2').innerText = translations.competencyMapTable2;
+            document.getElementById('competencyMapTable3').innerText = translations.competencyMapTable3;
+            document.getElementById('competencyMapTable4').innerText = translations.competencyMapTable4;
+            document.getElementById('competencyMapTable5').innerText = translations.competencyMapTable5;
+            document.getElementById('competencyMapTable6').innerText = translations.competencyMapTable6;
+            document.getElementById('competencyMapTable7').innerText = translations.competencyMapTable7;
+            document.getElementById('competencyMapTable8').innerText = translations.competencyMapTable8;
+        }
+    </script>
 </body>
 
 </html>
