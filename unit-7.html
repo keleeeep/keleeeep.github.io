@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kokel Technology</title>
+    <link rel="shortcut icon" type="image/png" href="" />
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/essentials.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <h3 class="mb-0 text-black opacity-9">Bahan Ajar Fonologi</h3>
+        <button class="navbar-toggler" id="solidColor" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-black" href="index.html">Beranda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-black" href="introduction.html">Pendahuluan</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-black" href="guideline.html">Petunjuk</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-black" href="material.html">Materi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-black" href="about.html">Tentang</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="mt-60">
+        <img src="assets/images/unit-7/Cover.png" alt="unit 7 cover" class="unit-cover">
+    </div>
+    <section id="unit-7">
+        <div class="container mt-100">
+            <div id="intro">
+                <h4>Selamat Datang di Unit Lingkungan Sekitar.<br>환경 수업에 오신 것을 환영합니다.</h4>
+                <p>Halo Sahabat BIPA.<br>안녕하세요 BIPA 친구들.</p>
+                <figure class="text-center">
+                    <img class="text-center" src="assets/images/unit-7/intro.png" alt="" style="height: auto; width: 100%;">
+                </figure>
+                <p>
+                    Pada kesempatan kali ini, kita akan mempelajari tentang lingkungan sekitar dalam bahasa Indonesia. Lingkungan sekitar mencakup berbagai elemen yang ada di sekitar kita, baik di rumah, di lingkungan sekitar, maupun di masyarakat. Memahami kosakata dan ungkapan tentang lingkungan sekitar akan membantu Anda berbicara dengan lebih baik tentang tempat-tempat dan keadaan di sekitar Anda.
+                    <br>
+                    이번 기회에는 인도네시아어로 주변 환경에 대해 배워보겠습니다. 주변 환경에는 집, 이웃, 사회 등 우리 주변에 존재하는 다양한 요소가 포함됩니다. 주변 환경에 대한 어휘와 표현을 이해하면 주변 장소와 상황에 대해 더 잘 말하는 데 도움이 됩니다.
+                    <br><br>
+                    Contoh kosakata tentang lingkungan sekitar: Rumah, taman, jalan, sekolah, dan tetangga.
+                    <br>
+                    주변 환경에 관한 어휘의 예: 주택, 공원, 거리, 학교 및 이웃.
+                    <br><br>
+                    Pada unit ini Anda akan disuguhkan kosakata tentang lingkungan sekitar. Anda akan berlatih membedakan dan melafalkan bunyi kata yang mirip pada bagian pasangan minimal. Selanjutnya, Anda akan berlatih melafalkan kalimat sederhana dan kalimat kompleks.
+                    <br>
+                    이 단원에서는 주변 환경에 관한 어휘를 배우게 됩니다. 비슷한 단어의 소리를 최소한의 쌍으로 구별하고 발음하는 연습을 하게 됩니다. 다음에는 간단한 문장과 복잡한 문장을 발음하는 연습을 하게 됩니다.
+                </p>
+            </div>
+            <div id="activity-1">
+                <div>
+                    <h3 class="text-left mb-20">
+                        A. Kosakata Tentang Lingkungan Sekitar
+                    </h3>
+                    <h4 class="text-left">
+                        Kegiatan 1. Simak dan pahami kosakata berikut!
+                    </h4>
+                </div>
+                <img class="w-30 audio-unit mb-20" src="assets/images/icon/speaker-filled-audio-tool.png" alt="audio" onclick="act11()">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img style="width: 100%;" src="assets/images/unit-7/Gambar 1. Kosakata.png" alt="">
+                    </div>
+                </div>
+                <div class="mt-20">
+                    <h4 class="text-left">
+                        Kegiatan 2. Ikuti pelafalan kosakata di atas!
+                    </h4>
+                    <div class="btn-wrapper">
+                        <button id="startBtnAct1" class="btn btn-primary mr-20">
+                          <span> Start Recording </span>
+                        </button>
+                        <button id="stopBtnAct1" class="btn btn-secondary" disabled>Stop Recording</button>
+                      </div>
+                      <div id="resultAct1" class="result"></div>
+                </div>
+            </div>
+            <div id="activity-2">
+                <div class="mt-50">
+                    <h3 class="text-left mb-20">
+                        B. Pasangan Minimal
+                    </h3>
+                    <h4 class="text-left">
+                        Kegiatan 1. Simak dan pahami perbedaan bunyi pada pelafalan kosakata berikut!
+                    </h4>
+                </div>
+                <div class="row">
+                    <table>
+                        <tr>
+                            <td>
+                                <img class="w-30 audio-unit mr-20" src="assets/images/icon/speaker-filled-audio-tool.png" alt="audio" onclick="act21()">
+                            </td>
+                            <td class="pr-20">
+                                <img src="assets/images/unit-7/Pasangan Minimal-Gambar 1. Taman.png" alt="">
+                            </td>
+                            <td>
+                                <img src="assets/images/unit-7/Pasangan Minimal-Gambar 2. Teman.png" alt="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="w-30 audio-unit mr-20" src="assets/images/icon/speaker-filled-audio-tool.png" alt="audio" onclick="act22()">
+                            </td>
+                            <td class="pr-20">
+                                <img src="assets/images/unit-7/Pasangan Minimal-Gambar 3. Ramah.png" alt="">
+                            </td>
+                            <td>
+                                <img src="assets/images/unit-7/Pasangan Minimal-Gambar 4. Rumah.png" alt="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="w-30 audio-unit mr-20" src="assets/images/icon/speaker-filled-audio-tool.png" alt="audio" onclick="act23()">
+                            </td>
+                            <td class="pr-20">
+                                <img src="assets/images/unit-7/Pasangan Minimal-Gambar 5. Pohon.png" alt="">
+                            </td>
+                            <td>
+                                <img src="assets/images/unit-7/Pasangan Minimal-Gambar 6. Bohong.png" alt="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="w-30 audio-unit mr-20" src="assets/images/icon/speaker-filled-audio-tool.png" alt="audio" onclick="act24()">
+                            </td>
+                            <td class="pr-20">
+                                <img src="assets/images/unit-7/Pasangan Minimal-Gambar 7. Tikar.png" alt="">
+                            </td>
+                            <td>
+                                <img src="assets/images/unit-7/Pasangan Minimal-Gambar 8. Tukar.png" alt="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="w-30 audio-unit mr-20" src="assets/images/icon/speaker-filled-audio-tool.png" alt="audio" onclick="act25()">
+                            </td>
+                            <td class="pr-20">
+                                <img src="assets/images/unit-7/Pasangan Minimal-Gambar 9. Tangga.png" alt="">
+                            </td>
+                            <td>
+                                <img src="assets/images/unit-7/Pasangan Minimal-Gambar 10. Tanggal.png" alt="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="w-30 audio-unit mr-20" src="assets/images/icon/speaker-filled-audio-tool.png" alt="audio" onclick="act26()">
+                            </td>
+                            <td class="pr-20">
+                                <img src="assets/images/unit-7/Pasangan Minimal-Gambar 11. Rumput.png" alt="">
+                            </td>
+                            <td>
+                                <img src="assets/images/unit-7/Pasangan Minimal-Gambar 12. Rambut.png" alt="">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="mt-20">
+                    <h4 class="text-left">
+                        Kegiatan 2. Ikuti pelafalan kosakata di atas!
+                    </h4>
+                    <div class="btn-wrapper">
+                        <button id="startBtnAct2" class="btn btn-primary mr-20">
+                          <span> Start Recording </span>
+                        </button>
+                        <button id="stopBtnAct2" class="btn btn-secondary" disabled>Stop Recording</button>
+                      </div>
+                      <div id="resultAct2" class="result"></div>
+                </div>
+                <div class="mt-20">
+                    <h4 class="text-left">
+                        Kegiatan 3. Simaklah audio berikut dan pilih kosakata yang Anda dengar!
+                    </h4>
+                    <img class="w-30 audio-unit mb-20" src="assets/images/icon/speaker-filled-audio-tool.png" alt="audio" onclick="act27()">
+                    <table class="table table-bordered w-400">
+                        <tr>
+                            <td>  <input type="radio" name="row_1">
+                                  <label>Teman</label>
+                            </td>
+                            <td>
+                                  <input type="radio" name="row_1">
+                                  <label>Taman</label
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>  <input type="radio" name="row_2">
+                                  <label>Tangga</label>
+                            </td>
+                            <td>
+                                  <input type="radio" name="row_2">
+                                  <label>Tanggal</label
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>  <input type="radio" name="row_3">
+                                  <label>Rumah</label>
+                            </td>
+                            <td>
+                                  <input type="radio" name="row_3">
+                                  <label>Ramah</label
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>  <input type="radio" name="row_4">
+                                  <label>Pantai</label>
+                            </td>
+                            <td>
+                                  <input type="radio" name="row_4">
+                                  <label>Bantai</label
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>  <input type="radio" name="row_5">
+                                  <label>Rumput</label>
+                            </td>
+                            <td>
+                                  <input type="radio" name="row_5">
+                                  <label>Rambut</label
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="activity-3">
+                <div class="mt-50">
+                    <h3 class="text-left mb-20">
+                        C. Kalimat <i>Tongue twister</i>
+                    </h3>
+                    <h4 class="text-left">
+                        Kegiatan 1. Simak dan ikuti pelafalan kalimat tongue twister pada audio berikut!
+                    </h4>
+                    <ol type="1">
+                        <li>Tetangga yang ramah naik ke tangga rumah. <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="" onclick="act31()"></li>
+                        <li>Tanah gambut ditanami rumput dan rambutan. <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="" onclick="act32()"></li>
+                    </ol>
+                </div>
+                <div class="mt-20">
+                    <h4 class="text-left">
+                        Kegiatan 2. Ikuti pelafalan kalimat tongue twister di atas! 
+                    </h4>
+                    <div class="btn-wrapper">
+                        <button id="startBtnAct3" class="btn btn-primary mr-20">
+                          <span> Start Recording </span>
+                        </button>
+                        <button id="stopBtnAct3" class="btn btn-secondary" disabled>Stop Recording</button>
+                      </div>
+                      <div id="resultAct3" class="result"></div>
+                </div>
+            </div>
+            <div id="activity-4">
+                <div class="mt-50 mb-50">
+                    <h3 class="text-left mb-20">
+                        D. Kalimat Sederhana Tentang Lingkungan Sekitar
+                    </h3>
+                    <h4 class="text-left">
+                        Kegiatan 1. Simak dan pahami kalimat berikut!
+                    </h4>
+                    <ol type="1">
+                        <li>Pantai terlihat dari gunung Kidul. <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="" onclick="act41()"></li>
+                        <li>Ada dua tangga di dalam rumahku.  <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="" onclick="act42()"></li>
+                        <li>Pohon di halaman rumah tinggi dan rindang. <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="" onclick="act43()"></li>
+                        <li>Lemari di ruang tamu berwana biru dan coklat. <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="" onclick="act44()"></li>
+                        <li>Setiap pagi, saya melihat burung-burung hinggap di pagar rumah tetangga. <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="" onclick="act45()"></li>
+                    </ol>
+                </div>
+                <div class="mt-20">
+                    <h4 class="text-left">
+                        Kegiatan 2. Ikuti pelafalan kalimat di atas!
+                    </h4>
+                    <div class="btn-wrapper">
+                        <button id="startBtnAct4" class="btn btn-primary mr-20">
+                          <span> Start Recording </span>
+                        </button>
+                        <button id="stopBtnAct4" class="btn btn-secondary" disabled>Stop Recording</button>
+                      </div>
+                      <div id="resultAct4" class="result"></div>
+                </div>
+            </div>
+            <div id="activity-5">
+                <div class="mt-50 mb-50">
+                    <h3 class="text-left mb-20">
+                        E. Kalimat Kompleks Tentang Lingkungan Sekitar
+                    </h3>
+                    <h4 class="text-left">
+                        Kegiatan 1. Simak dan pahami kalimat berikut!
+                    </h4>
+                    <ol type="1">
+                        <li>Henni menyisir rambut adik di teras dan ibu mencabut rumput di halaman.  <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="" onclick="act51()"></li>
+                        <li>Pada sore hari, Lisa duduk di taman kota bersama dengan teman-temannya. <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="" onclick="act52()"></li>
+                        <li>Kakak berbohong kepada ibu tentang kejadian adik yang terjatuh dari pohon. <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="" onclick="act53()"></li>
+                        <li>Setelah pulang dari taman, mereka menyadari tikar yang mereka bawa telah tertukar. <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="" onclick="act54()"></li>
+                        <li>Rumah Ika berada di antara rumah Susi dan Budi, setiap pagi Ika menyapa mereka dengan ramah. <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="" onclick="act55()"></li>
+                    </ol>
+                </div>
+                <div class="mt-20 mb-50">
+                    <h4 class="text-left">
+                        Kegiatan 2. Ikuti pelafalan kalimat di atas!
+                    </h4>
+                    <div class="btn-wrapper">
+                        <button id="startBtnAct5" class="btn btn-primary mr-20">
+                          <span> Start Recording </span>
+                        </button>
+                        <button id="stopBtnAct5" class="btn btn-secondary" disabled>Stop Recording</button>
+                      </div>
+                      <div id="resultAct5" class="result"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Activity - 1
+        function act11(){
+            var music = new Audio('assets/audio/Unit 7/Unit 7. A.m4a');
+            music.play();
+        }
+
+        // Activity - 2
+        function act21(){
+            var music = new Audio('assets/audio/Unit 7/Unit 7. B. 1. Taman Teman.m4a');
+            music.play();
+        }
+        function act22(){
+            var music = new Audio('assets/audio/Unit 7/Unit 7. B. 2. Ramah Rumah.m4a');
+            music.play();
+        }
+        function act23(){
+            var music = new Audio('assets/audio/Unit 7/Unit 7. B. 3. Pohon Bohong.m4a');
+            music.play();
+        }
+        function act24(){
+            var music = new Audio('assets/audio/Unit 7/Unit 7. B. 4. Tikar Tukar.m4a');
+            music.play();
+        }
+        function act25(){
+            var music = new Audio('assets/audio/Unit 7/Unit 7. B. 5. Tangga Tanggal .m4a');
+            music.play();
+        }
+        function act26(){
+            var music = new Audio('assets/audio/Unit 7/Unit 7. B. 6. Rumput Rambut.m4a');
+            music.play();
+        }
+        function act27(){
+            var music = new Audio('assets/audio/Unit 7/Unit 7. B. Kegiatan 3.m4a');
+            music.play();
+        }
+
+        // Activity - 3
+        function act31(){
+            var music = new Audio('assets/audio/Unit 7/Unit 7. C. 1.m4a');
+            music.play();
+        }
+        function act32(){
+            var music = new Audio('assets/audio/Unit 7/Unit 7. C. 2.m4a');
+            music.play();
+        }
+
+        // Activity - 4
+        function act41(){
+            var music = new Audio('assets/audio/Unit 7/Unit 7. D. 1.m4a');
+            music.play();
+        }
+        function act42(){
+            var music = new Audio('assets/audio/Unit 7/Unit 7. D. 2.m4a');
+            music.play();
+        }
+        function act43(){
+            var music = new Audio('assets/audio/Unit 7/Unit 7. D. 3.m4a');
+            music.play();
+        }
+        function act44(){
+            var music = new Audio('assets/audio/Unit 7/Unit 7. D. 4.m4a');
+            music.play();
+        }
+        function act45(){
+            var music = new Audio('assets/audio/Unit 7/Unit 7. D. 5.m4a');
+            music.play();
+        }
+
+        // Activity - 5
+        function act51(){
+            var music = new Audio('assets/audio/Unit 7/Unit 7. E. 1.m4a');
+            music.play();
+        }
+        function act52(){
+            var music = new Audio('assets/audio/Unit 7/Unit 7. E. 2.m4a');
+            music.play();
+        }
+        function act53(){
+            var music = new Audio('assets/audio/Unit 7/Unit 7. E. 3.m4a');
+            music.play();
+        }
+        function act54(){
+            var music = new Audio('assets/audio/Unit 7/Unit 7. E.4.m4a');
+            music.play();
+        }
+        function act55(){
+            var music = new Audio('assets/audio/Unit 7/Unit 7. E.5.m4a');
+            music.play();
+        }
+    </script>
+
+    <script src="assets/js/speech-to-text-act-1.js"></script>
+    <script src="assets/js/speech-to-text-act-2.js"></script>
+    <script src="assets/js/speech-to-text-act-3.js"></script>
+    <script src="assets/js/speech-to-text-act-4.js"></script>
+    <script src="assets/js/speech-to-text-act-5.js"></script>
+</body>
+
+</html>

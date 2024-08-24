@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kokel Technology</title>
+    <link rel="shortcut icon" type="image/png" href="" />
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/essentials.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <h3 class="mb-0 text-black opacity-9">Bahan Ajar Fonologi</h3>
+        <button class="navbar-toggler" id="solidColor" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-black" href="index.html">Beranda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-black" href="introduction.html">Pendahuluan</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-black" href="guideline.html">Petunjuk</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-black" href="material.html">Materi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-black" href="about.html">Tentang</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="mt-60">
+        <img src="assets/images/unit-8/Cover.png" alt="unit 8 cover" class="unit-cover">
+    </div>
+    <section id="unit-8">
+        <div class="container mt-100">
+            <div id="intro">
+                <h4>Selamat Datang di Pelajaran Liburan!<br>휴일 수업에 오신 것을 환영합니다!</h4>
+                <p>Halo Sahabat BIPA!<br>안녕하세요 BIPA 친구들!</p>
+                <figure class="text-center">
+                    <img class="text-center" src="assets/images/unit-8/intro.png" alt="" style="height: auto; width: 100%;">
+                </figure>
+                <p>
+                    Pada kesempatan kali ini, kita akan belajar tentang liburan dalam bahasa Indonesia. Orang Indonesia biasanya memanfaatkan waktu liburan untuk berjalan-jalan ke kota lain, mengunjungi tempat wisata, bersantai di taman, atau pulang kampung. Pulang kampung biasa disebut dengan istilah “mudik”. Memahami kosakata dan ungkapan tentang liburan akan membantu Anda berbicara tentang rencana liburan Anda dan bertanya tentang rencana liburan orang lain.
+                    <br>
+                    이번 시간에는 인도네시아의 휴일에 대해 배워보겠습니다. 인도네시아인들은 대개 휴가 시간을 이용해 다른 도시로 여행을 떠나거나, 관광명소를 방문하거나, 공원에서 휴식을 취하거나, 집으로 돌아갑니다. 집에 돌아가는 것을 일반적으로 "귀가"라고 합니다. 휴가 관련 어휘와 문구를 이해하면 자신의 휴가 계획에 대해 이야기하고 다른 사람의 휴가 계획에 대해 물어보는 데 도움이 됩니다.
+                    <br><br>
+                    Pada unit ini, Anda akan diberikan kosakata tentang liburan. Anda akan berlatih membedakan bunyi kata yang mirip pada bagian pasangan minimal. Kemudian Anda akan berlatih melafalkan <i>tongue twister</i>, kalimat sederhana, kalimat kompleks, dan percakapan tentang liburan. 
+                    <br>
+                    이번 단원에서는 휴일에 관한 어휘를 배우게 됩니다. 최소한의 쌍으로 유사한 단어의 소리를 구별하는 연습을 하게 됩니다. 그런 다음 텅 트위스터, 간단한 문장, 복잡한 문장, 휴일에 관한 대화를 발음하는 연습을 하게 됩니다.
+                </p>
+            </div>
+            <div id="activity-1">
+                <div>
+                    <h3 class="text-left mb-20">
+                        A. Kosakata Tentang Liburan
+                    </h3>
+                    <h4 class="text-left">
+                        Kegiatan 1. Simak dan pahami pelafalan kosakata berikut!
+                    </h4>
+                </div>
+                <img class="w-30 audio-unit mb-20" src="assets/images/icon/speaker-filled-audio-tool.png" alt="audio" onclick="act11()">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img style="width: 100%;" src="assets/images/unit-8/Gambar 1. Kosakata.png" alt="">
+                    </div>
+                </div>
+                <div class="mt-20">
+                    <h4 class="text-left">
+                        Kegiatan 2. Ikuti pelafalan kosakata di atas!
+                    </h4>
+                    <div class="btn-wrapper">
+                        <button id="startBtnAct1" class="btn btn-primary mr-20">
+                          <span> Start Recording </span>
+                        </button>
+                        <button id="stopBtnAct1" class="btn btn-secondary" disabled>Stop Recording</button>
+                      </div>
+                      <div id="resultAct1" class="result"></div>
+                </div>
+            </div>
+            <div id="activity-2">
+                <div class="mt-50">
+                    <h3 class="text-left mb-20">
+                        B. Pasangan Minimal
+                    </h3>
+                    <h4 class="text-left">
+                        Kegiatan 1. Simak dan pahami perbedaan bunyi pada pelafalan kosakata berikut!
+                    </h4>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <table class="table table-bordered">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="audio" onclick="act21()">
+                                    </td>
+                                    <td>
+                                        <img class="w-150" src="assets/images/unit-8/Pasangan Minimal. Gambar 1. Arus.png" alt="">
+                                    </td>
+                                    <td>
+                                        <img class="w-150" src="assets/images/unit-8/Pasangan Minimal. Gambar 2. Harus.png" alt="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="audio" onclick="act22()">
+                                    </td>
+                                    <td>
+                                        <img class="w-150" src="assets/images/unit-8/Pasangan Minimal. Gambar 5. Laut.png" alt="">
+                                    </td>
+                                    <td>
+                                        <img class="w-150" src="assets/images/unit-8/Pasangan Minimal. Gambar 6. Lauk.png" alt="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="audio" onclick="act23()">
+                                    </td>
+                                    <td>
+                                        <img class="w-150" src="assets/images/unit-8/Pasangan Minimal. Gambar 9. Bata.png" alt="">
+                                    </td>
+                                    <td>
+                                        <img class="w-150" src="assets/images/unit-8/Pasangan Minimal. Gambar 10. Batu.png" alt="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="audio" onclick="act24()">
+                                    </td>
+                                    <td>
+                                        <img class="w-150" src="assets/images/unit-8/Pasangan Minimal. Gambar 13. Udara.png" alt="">
+                                    </td>
+                                    <td>
+                                        <img class="w-150" src="assets/images/unit-8/Pasangan Minimal. Gambar 14. Utara.png" alt="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="audio" onclick="act25()">
+                                    </td>
+                                    <td>
+                                        <img class="w-150" src="assets/images/unit-8/Pasangan Minimal. Gambar 17. Libur.png" alt="">
+                                    </td>
+                                    <td>
+                                        <img class="w-150" src="assets/images/unit-8/Pasangan Minimal. Gambar 18. Lebur.png" alt="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="audio" onclick="act26()">
+                                    </td>
+                                    <td>
+                                        <img class="w-150" src="assets/images/unit-8/Pasangan Minimal. Gambar 3. Gunung.png" alt="">
+                                    </td>
+                                    <td>
+                                        <img class="w-150" src="assets/images/unit-8/Pasangan Minimal. Gambar 4. Gulung.png" alt="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="audio" onclick="act27()">
+                                    </td>
+                                    <td>
+                                        <img class="w-150" src="assets/images/unit-8/Pasangan Minimal. Gambar 7. Pantai.png" alt="">
+                                    </td>
+                                    <td>
+                                        <img class="w-150" src="assets/images/unit-8/Pasangan Minimal. Gambar 8. Pandai.png" alt="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="audio" onclick="act28()">
+                                    </td>
+                                    <td>
+                                        <img class="w-150" src="assets/images/unit-8/Pasangan Minimal. Gambar 11. Berangkat.png" alt="">
+                                    </td>
+                                    <td>
+                                        <img class="w-150" src="assets/images/unit-8/Pasangan Minimal. Gambar 12. Perangkat.png" alt="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="audio" onclick="act29()">
+                                    </td>
+                                    <td>
+                                        <img class="w-150" src="assets/images/unit-8/Pasangan Minimal. Gambar 15. Pandang.png" alt="">
+                                    </td>
+                                    <td>
+                                        <img class="w-150" src="assets/images/unit-8/Pasangan Minimal. Gambar 16. Bandang.png" alt="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="audio" onclick="act30()">
+                                    </td>
+                                    <td>
+                                        <img class="w-150" src="assets/images/unit-8/Pasangan Minimal. Gambar 19. Liburan.png" alt="">
+                                    </td>
+                                    <td>
+                                        <img class="w-150" src="assets/images/unit-8/Pasangan Minimal. Gambar 20. Hiburan.png" alt="">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="mt-20">
+                    <h4 class="text-left">
+                        Kegiatan 2. Ikuti pelafalan kosakata di atas!
+                    </h4>
+                    <div class="btn-wrapper">
+                        <button id="startBtnAct2" class="btn btn-primary mr-20">
+                          <span> Start Recording </span>
+                        </button>
+                        <button id="stopBtnAct2" class="btn btn-secondary" disabled>Stop Recording</button>
+                      </div>
+                      <div id="resultAct2" class="result"></div>
+                </div>
+            </div>
+            <div id="activity-3">
+                <div class="mt-50">
+                    <h3 class="text-left mb-20">
+                        C. Kalimat <i>Tongue twister</i>
+                    </h3>
+                    <h4 class="text-left">
+                        Kegiatan 1. Simak dan ikuti pelafalan audio berikut!
+                    </h4>
+                    <ol type="1">
+                        <li>Panda tidak pandai berenang di pantai. <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="" onclick="act31()"></li>
+                        <li>Gudang gedung itu di atas gunung tergulung-gulung badai. <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="" onclick="act32()"></li>
+                    </ol>
+                </div>
+                <div class="mt-20">
+                    <h4 class="text-left">
+                        Kegiatan 2. Praktikkan pelafalan kalimat di atas dengan kecepatan normal dan cepat!
+                    </h4>
+                    <div class="btn-wrapper">
+                        <button id="startBtnAct3" class="btn btn-primary mr-20">
+                          <span> Start Recording </span>
+                        </button>
+                        <button id="stopBtnAct3" class="btn btn-secondary" disabled>Stop Recording</button>
+                      </div>
+                      <div id="resultAct3" class="result"></div>
+                </div>
+            </div>
+            <div id="activity-4">
+                <div class="mt-50 mb-50">
+                    <h3 class="text-left mb-20">
+                        D. Kalimat Sederhana Tentang Kegemaran
+                    </h3>
+                    <h4 class="text-left">
+                        Kegiatan 1. Simak dan pahami kalimat berikut!
+                    </h4>
+                    <ol type="1">
+                        <li>Setiap libur sekolah, kami pergi mengunjungi nenek di kampung. <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="" onclick="act41()"></li>
+                        <li>Kami berangkat dari stasiun Bandung pukul 07.00 dini hari. <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="" onclick="act42()"></li>
+                        <li>Sebelum pergi jalan-jalan, sebaiknya berkemas terlebih dahulu. <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="" onclick="act43()"></li>
+                        <li>Di hari terakhir liburan, kami biasanya berbelanja oleh-oleh untuk dibawa pulang. <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="" onclick="act44()"></li>
+                        <li>Perjalanan ke pulau Gili adalah pengalaman yang sangat menarik. <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="" onclick="act45()"></li>
+                    </ol>
+                </div>
+                <div class="mt-20">
+                    <h4 class="text-left">
+                        Kegiatan 2. Ikuti pelafalan kalimat di atas!
+                    </h4>
+                    <div class="btn-wrapper">
+                        <button id="startBtnAct4" class="btn btn-primary mr-20">
+                          <span> Start Recording </span>
+                        </button>
+                        <button id="stopBtnAct4" class="btn btn-secondary" disabled>Stop Recording</button>
+                      </div>
+                      <div id="resultAct4" class="result"></div>
+                </div>
+            </div>
+            <div id="activity-5">
+                <div class="mt-50 mb-50">
+                    <h3 class="text-left mb-20">
+                        E. Kalimat Kompleks Tentang Kegemaran
+                    </h3>
+                    <h4 class="text-left">
+                        Kegiatan 1. Simak dan pahami kalimat berikut!
+                    </h4>
+                    <ol type="1">
+                        <li>Mina bersantai di pinggir pantai dengan teman-teman kelas yang pandai. <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="" onclick="act51()"></li>
+                        <li>Perjalanan kami menuju gunung dimulai dari arah utara karena udaranya lebih segar. <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="" onclick="act52()"></li>
+                        <li>Liburan di pegunungan memberikan udara segar dan pemandangan alam yang menenangkan. <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="" onclick="act53()"></li>
+                        <li>Liburan kali ini adalah perjalanan yang paling ditunggu, tua dan muda melebur dalam acara hiburan di malam hari. <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="" onclick="act54()"></li>
+                        <li>Rencana perjalanan mereka menjadi bencana karena tidak mempersiapkan peralatan yang lengkap. <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="" onclick="act55()"></li>
+                    </ol>
+                </div>
+                <div class="mt-20">
+                    <h4 class="text-left">
+                        Kegiatan 2. Ikuti pelafalan kalimat di atas!
+                    </h4>
+                    <div class="btn-wrapper">
+                        <button id="startBtnAct5" class="btn btn-primary mr-20">
+                          <span> Start Recording </span>
+                        </button>
+                        <button id="stopBtnAct5" class="btn btn-secondary" disabled>Stop Recording</button>
+                      </div>
+                      <div id="resultAct5" class="result"></div>
+                </div>
+            </div>
+            <div id="activity-6">
+                <div class="mt-50 mb-50">
+                    <h3 class="text-left mb-20">
+                        F. Percakapan Sederhana Tentang Kegemaran
+                    </h3>
+                    <h4 class="text-left">
+                        Kegiatan 1. Simak dan pahami percakapan berikut!
+                    </h4>
+                    <img class="w-20 audio-unit" src="assets/images/icon/speaker-filled-audio-tool.png" alt="" onclick="act61()">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>Lilis</td>
+                                <td>: Hai Nita, apa kabar? Apa rencana liburanmu bulan ini?</td>
+                            </tr>
+                            <tr>
+                                <td>Nita</td>
+                                <td>: Hai Lilis, kabarku baik. Aku rencananya akan pergi liburan ke Bali	       
+                                    bersama keluarga. Bagaimana denganmu?
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Lilis</td>
+                                <td>: Wah, seru sekali! Aku belum punya rencana pasti, mungkin akan   
+                                    liburan ke pantai juga. Bagaimana persiapanmu untuk liburan ke Bali?
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Nita</td>
+                                <td>: Sudah hampir siap. Kami sudah memesan hotel di pinggir pantai dan	     
+                                    merencanakan untuk pergi ke beberapa tempat wisata di sana.
+                                  </td>
+                            </tr>
+                            <tr>
+                                <td>Lilis</td>
+                                <td>: Keren! Bali memang punya banyak tempat yang bagus untuk	       
+                                    dikunjungi. Kamu harus mencoba kuliner khas Bali.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Nita</td>
+                                <td>: Iya, nanti aku pasti akan mencoba makanan lezat di sana. Kamu punya
+                                    rencana kegiatan apa di pantai?
+                                  </td>
+                            </tr>
+                            <tr>
+                                <td>Lilis</td>
+                                <td>: Mungkin akan berenang, snorkeling, dan tentu saja bersantai menikmati	  
+                                    matahari terbenam. Bagaimana denganmu?
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Nita</td>
+                                <td>: Kami juga berencana untuk bermain air dan mungkin mengunjungi
+                                    beberapa pura terkenal di sana.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Lilis</td>
+                                <td>: Terdengar menyenangkan sekali! Semoga liburanmu lancar dan
+                                    menyenangkan ya, Nita.
+                                  </td>
+                            </tr>
+                            <tr>
+                                <td>Nita</td>
+                                <td>: Terima kasih, Lilis! Kamu juga semoga menemukan tempat yang seru
+                                    untuk liburanmu.                                  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Lilis</td>
+                                <td>: Terima kasih. Selamat liburan dan hati-hati di perjalanan!                                 
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Nita</td>
+                                <td>: Sama-sama, Lilis. Sampai jumpa!</td>
+                            </tr>
+                            <tr>
+                                <td>Lilis</td>
+                                <td>: Sampai jumpa, Nita!</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mt-20 mb-50">
+                    <h4 class="text-left">
+                        Kegiatan 2. Tiru percakapan di atas bersama teman atau guru Anda dan ubahlah sesuai pengalaman Anda!
+                    </h4>
+                    <div class="btn-wrapper">
+                        <button id="startBtnDialogue" class="btn btn-primary mr-20">
+                          <span> Start Recording </span>
+                        </button>
+                        <button id="stopBtnDialogue" class="btn btn-secondary" disabled>Stop Recording</button>
+                      </div>
+                      <div id="resultDialogue" class="result"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Activity - 1
+        function act11(){
+            var music = new Audio('assets/audio/Unit 8/Unit 8. A.m4a');
+            music.play();
+        }
+
+        // Activity - 2
+        function act21(){
+            var music = new Audio('assets/audio/Unit 8/Unit 8. B. 1. Arus Harus.m4a');
+            music.play();
+        }
+        function act22(){
+            var music = new Audio('assets/audio/Unit 8/Unit 8. B. 2. Laut Lauk.m4a');
+            music.play();
+        }
+        function act23(){
+            var music = new Audio('assets/audio/Unit 8/Unit 8. B. 3. Bata Batu.m4a');
+            music.play();
+        }
+        function act24(){
+            var music = new Audio('assets/audio/Unit 8/Unit 8. B. 4. Utara Utara.m4a');
+            music.play();
+        }
+        function act25(){
+            var music = new Audio('assets/audio/Unit 8/Unit 8. B. 5. Libur Lebur.m4a');
+            music.play();
+        }
+        function act26(){
+            var music = new Audio('assets/audio/Unit 8/Unit 8. B. 6 Gunung Gulung.m4a');
+            music.play();
+        }
+        function act27(){
+            var music = new Audio('assets/audio/Unit 8/Unit 8. B. 7. Pantai Pandai.m4a');
+            music.play();
+        }
+        function act28(){
+            var music = new Audio('assets/audio/Unit 8/Unit 8. B. 8. Berangkat-Perangkat.m4a');
+            music.play();
+        }
+        function act29(){
+            var music = new Audio('assets/audio/Unit 8/assets/audio/Unit 8/Unit 8. B. 9. Pandang Bandang.m4a');
+            music.play();
+        }
+        function act30(){
+            var music = new Audio('assets/audio/Unit 8/assets/audio/Unit 8/Unit 8. B. 10. Liburan Hiburan.m4a');
+            music.play();
+        }
+
+        // Activity - 3
+        function act31(){
+            var music = new Audio('assets/audio/Unit 8/Unit 8. C. 1.m4a');
+            music.play();
+        }
+        function act32(){
+            var music = new Audio('assets/audio/Unit 8/Unit 8. C. 2.m4a');
+            music.play();
+        }
+
+        // Activity - 4
+        function act41(){
+            var music = new Audio('assets/audio/Unit 8/Unit 8. D. 1.m4a');
+            music.play();
+        }
+        function act42(){
+            var music = new Audio('assets/audio/Unit 8/Unit 8. D. 2.m4a');
+            music.play();
+        }
+        function act43(){
+            var music = new Audio('assets/audio/Unit 8/Unit 8. D. 3.m4a');
+            music.play();
+        }
+        function act44(){
+            var music = new Audio('assets/audio/Unit 8/Unit 8. D. 4.m4a');
+            music.play();
+        }
+        function act45(){
+            var music = new Audio('assets/audio/Unit 8/Unit 8. D. 5.m4a');
+            music.play();
+        }
+
+        // Activity - 5
+        function act51(){
+            var music = new Audio('assets/audio/Unit 8/Unit 8. E. 1.m4a');
+            music.play();
+        }
+        function act52(){
+            var music = new Audio('assets/audio/Unit 8/Unit 8. E. 2.m4a');
+            music.play();
+        }
+        function act53(){
+            var music = new Audio('assets/audio/Unit 8/Unit 8. E. 3.m4a');
+            music.play();
+        }
+        function act54(){
+            var music = new Audio('assets/audio/Unit 8/Unit 8. E.4.m4a');
+            music.play();
+        }
+        function act55(){
+            var music = new Audio('assets/audio/Unit 8/Unit 8. E.5.m4a');
+            music.play();
+        }
+
+        // Activity - 6
+        function act61(){
+            var music = new Audio('assets/audio/Unit 8/Unit 8. F.m4a');
+            music.play();
+        }
+    </script>
+
+    <script src="assets/js/speech-to-text-act-1.js"></script>
+    <script src="assets/js/speech-to-text-act-2.js"></script>
+    <script src="assets/js/speech-to-text-act-3.js"></script>
+    <script src="assets/js/speech-to-text-act-4.js"></script>
+    <script src="assets/js/speech-to-text-act-5.js"></script>
+    <script src="assets/js/speech-to-text-dialogue.js"></script>
+</body>
+
+</html>
