@@ -1,94 +1,297 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kokel Technology</title>
-    <link rel="shortcut icon" type="image/png" href="" />
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
-    <link rel="stylesheet" href="assets/css/essentials.css">
-    <link rel="stylesheet" href="assets/css/layout.css">
-    <style>
-        body  {
-            background-image: url("assets/images/Halaman\ Beranda.png");
-            background-size: cover;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fredy Gunawan · Senior Backend Engineer</title>
+  <meta name="description" content="Senior backend engineer with 6+ years of experience, mostly in Go. Ex-ByteDance (TikTok Shop Ads) and Tokopedia. Available for remote contract and full-time roles.">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Fredy Gunawan · Senior Backend Engineer">
+  <meta property="og:description" content="Senior backend engineer with 6+ years of experience, mostly in Go. Ex-ByteDance (TikTok Shop Ads) and Tokopedia.">
+  <meta property="og:url" content="https://keleeeep.github.io/">
+  <meta property="og:image" content="https://keleeeep.github.io/img/fredy.jpg">
+  <meta property="og:image:width" content="400">
+  <meta property="og:image:height" content="400">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://keleeeep.github.io/">
+  <meta name="theme-color" content="#f6f5f1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121416" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231f3a5f'/%3E%3Ctext x='32' y='42' font-family='ui-monospace,Menlo,monospace' font-size='26' font-weight='700' fill='%23f6f5f1' text-anchor='middle'%3EFG%3C/text%3E%3C/svg%3E">
+  <style>
+:root {
+  --bg: #f6f5f1;
+  --surface: #ffffff;
+  --ink: #16191d;
+  --muted: #5b626b;
+  --line: #e2e0d9;
+  --accent: #1f3a5f;
+  --accent-ink: #f6f5f1;
+  --accent-soft: #e6ecf3;
+  --mark: #b4541e;
+  --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --radius: 10px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121416;
+    --surface: #1a1d21;
+    --ink: #eceae4;
+    --muted: #9aa1a9;
+    --line: #2a2e33;
+    --accent: #9cc0ea;
+    --accent-ink: #121416;
+    --accent-soft: #1d2836;
+    --mark: #f0a46c;
+  }
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 72px; -webkit-text-size-adjust: 100%; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font); font-size: 17px; line-height: 1.6; }
+a { color: inherit; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 0 20px; }
+@media (min-width: 768px) { .wrap { padding: 0 32px; } }
+
+.skip { position: absolute; left: -999px; top: 8px; background: var(--accent); color: var(--accent-ink); padding: 8px 12px; border-radius: 6px; z-index: 20; }
+.skip:focus { left: 8px; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+.top { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 90%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+.top-inner { display: flex; align-items: center; justify-content: space-between; height: 60px; gap: 16px; }
+.logo { font-family: var(--mono); font-weight: 700; text-decoration: none; letter-spacing: -0.02em; }
+.top nav { display: flex; gap: 4px; }
+.top nav a { text-decoration: none; color: var(--muted); font-size: 15px; padding: 10px 10px; min-height: 44px; display: inline-flex; align-items: center; }
+.top nav a:hover { color: var(--ink); }
+@media (max-width: 420px) { .top nav a.opt { display: none; } }
+
+.hero { padding: 64px 0 48px; }
+@media (min-width: 768px) { .hero { padding: 96px 0 64px; } }
+.hero-grid { display: grid; gap: 28px; align-items: center; }
+@media (min-width: 768px) { .hero-grid { grid-template-columns: auto 1fr; gap: 40px; } }
+.avatar { width: 120px; height: 120px; border-radius: 50%; border: 1px solid var(--line); display: block; object-fit: cover; }
+@media (min-width: 768px) { .avatar { width: 168px; height: 168px; } }
+.eyebrow { font-family: var(--mono); font-size: 13px; letter-spacing: 0.04em; color: var(--muted); margin: 0 0 10px; }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: #2f9e6b; display: inline-block; margin-right: 6px; vertical-align: 1px; }
+h1 { font-size: clamp(34px, 6vw, 54px); line-height: 1.05; letter-spacing: -0.03em; margin: 0 0 16px; }
+.lead { font-size: clamp(18px, 2.2vw, 21px); color: var(--muted); margin: 0 0 24px; max-width: 46ch; text-wrap: pretty; }
+.lead strong { color: var(--ink); font-weight: 600; }
+.ctas { display: flex; flex-wrap: wrap; gap: 10px; }
+.btn { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px; border-radius: var(--radius); font-weight: 600; font-size: 15px; text-decoration: none; border: 1px solid var(--line); background: var(--surface); }
+.btn:hover { border-color: var(--muted); }
+.btn-primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.btn-primary:hover { border-color: var(--accent); filter: brightness(1.08); }
+.btn svg { width: 18px; height: 18px; flex: none; }
+
+.stats { border-block: 1px solid var(--line); }
+.stats dl { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 0; }
+@media (min-width: 768px) { .stats dl { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.stat { padding: 22px 16px 22px 0; border-bottom: 1px solid var(--line); }
+.stat:nth-last-child(-n+2) { border-bottom: 0; }
+@media (min-width: 768px) { .stat { border-bottom: 0; border-right: 1px solid var(--line); padding-left: 20px; } .stat:first-child { padding-left: 0; } .stat:last-child { border-right: 0; } }
+.stat dt { font-family: var(--mono); font-size: clamp(26px, 4vw, 34px); font-weight: 700; letter-spacing: -0.03em; color: var(--ink); line-height: 1.1; }
+.stat dd { margin: 6px 0 0; font-size: 14px; color: var(--muted); line-height: 1.4; }
+
+section { padding: 56px 0; }
+@media (min-width: 768px) { section { padding: 80px 0; } }
+h2 { font-size: 13px; font-family: var(--mono); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--mark); margin: 0 0 8px; }
+.section-title { font-size: clamp(24px, 3.4vw, 32px); letter-spacing: -0.02em; line-height: 1.2; margin: 0 0 32px; max-width: 30ch; }
+
+.cases { display: grid; gap: 16px; }
+@media (min-width: 768px) { .cases { grid-template-columns: 1fr 1fr; } }
+.case { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 24px; display: grid; gap: 12px; align-content: start; }
+.case-meta { font-family: var(--mono); font-size: 13px; color: var(--muted); }
+.nowrap { white-space: nowrap; }
+.case h3 { margin: 0; font-size: 20px; line-height: 1.3; letter-spacing: -0.01em; }
+.case p { margin: 0; color: var(--muted); font-size: 16px; }
+.case ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; }
+.case li { font-size: 15px; padding-left: 18px; position: relative; }
+.case li::before { content: ""; position: absolute; left: 0; top: 0.7em; width: 8px; height: 2px; background: var(--mark); }
+.result { font-family: var(--mono); font-size: 14px; background: var(--accent-soft); color: var(--ink); padding: 10px 12px; border-radius: 8px; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tags span { font-family: var(--mono); font-size: 12px; color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 2px 9px; }
+
+.alt { background: var(--surface); border-block: 1px solid var(--line); }
+.jobs { list-style: none; margin: 0; padding: 0; }
+.job { display: grid; gap: 4px 24px; padding: 20px 0; border-top: 1px solid var(--line); }
+.job:last-child { border-bottom: 1px solid var(--line); }
+@media (min-width: 768px) { .job { grid-template-columns: 170px 1fr; } }
+.job-when { font-family: var(--mono); font-size: 14px; color: var(--muted); padding-top: 2px; }
+.job-what h3 { margin: 0; font-size: 18px; }
+.job-what h3 span { font-weight: 400; color: var(--muted); }
+.job-what p { margin: 4px 0 0; color: var(--muted); font-size: 15px; }
+
+.skills { display: grid; gap: 20px; }
+@media (min-width: 768px) { .skills { grid-template-columns: repeat(3, 1fr); gap: 32px; } }
+.skills h3 { font-size: 15px; margin: 0 0 8px; }
+.skills p { margin: 0; color: var(--muted); font-size: 15px; }
+
+.contact { text-align: left; }
+.contact .section-title { margin-bottom: 16px; }
+.contact p { color: var(--muted); max-width: 52ch; margin: 0 0 24px; }
+.mail { font-family: var(--mono); font-size: clamp(18px, 3.4vw, 26px); font-weight: 700; color: var(--accent); text-decoration: none; word-break: break-all; display: inline-block; padding: 6px 0; }
+.mail:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+footer { border-top: 1px solid var(--line); padding: 24px 0 40px; font-size: 14px; color: var(--muted); }
+footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
+  </style>
 </head>
-
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <h3 class="mb-0 text-black opacity-9" id="navTitle"></h3>
-        <button class="navbar-toggler" id="solidColor" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fas fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link text-black" href="index.html" id="home"></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-black" href="introduction.html" id="introduction"></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-black" href="guideline.html" id="guideline"></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-black" href="material.html">Materi</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-black" href="about.html" id="about"></a>
-                </li>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="top">
+    <div class="wrap top-inner">
+      <a class="logo" href="#" aria-label="Fredy Gunawan, back to top">fredy.gunawan</a>
+      <nav aria-label="Main">
+        <a href="#work">Work</a>
+        <a class="opt" href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="hero">
+      <div class="wrap hero-grid">
+        <picture>
+          <source srcset="img/fredy.webp" type="image/webp">
+          <img class="avatar" src="img/fredy.jpg" alt="Portrait of Fredy Gunawan" width="168" height="168">
+        </picture>
+        <div>
+          <p class="eyebrow"><span class="dot" aria-hidden="true"></span> Open to remote contract and full-time roles · GMT+7</p>
+          <h1>Fredy Gunawan</h1>
+          <p class="lead">Senior backend engineer. I build <strong>Go systems that stay fast and reliable under real traffic</strong>, most recently on the ads platforms behind TikTok Shop and Tokopedia.</p>
+          <div class="ctas">
+            <a class="btn btn-primary" href="mailto:goenawan.fredy@gmail.com">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+              Email me
+            </a>
+            <a class="btn" href="https://www.linkedin.com/in/fredy-gunawan/" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+              LinkedIn
+            </a>
+            <a class="btn" href="https://github.com/keleeeep" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57v-2.04c-3.34.73-4.04-1.6-4.04-1.6-.55-1.4-1.34-1.77-1.34-1.77-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22v3.29c0 .32.21.69.82.57A12 12 0 0 0 12 .3"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="wrap">
+        <dl>
+          <div class="stat"><dt>6+ yrs</dt><dd>shipping production software, mostly backends in Go</dd></div>
+          <div class="stat"><dt>5%</dt><dd>of TikTok Shop Store Ads GMV from my recall and ranking work</dd></div>
+          <div class="stat"><dt>~30%</dt><dd>annual infrastructure cost cut at Tokopedia Ads</dd></div>
+          <div class="stat"><dt>200M+</dt><dd>users on the marketplace my ads systems served</dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <section id="work" aria-labelledby="work-h">
+      <div class="wrap">
+        <h2 id="work-h">Selected work</h2>
+        <p class="section-title">Systems where every change had to prove itself in production.</p>
+        <div class="cases">
+          <article class="case">
+            <div class="case-meta">ByteDance · TikTok Shop Ads · <span class="nowrap">2024–2026</span></div>
+            <h3>Recall and ranking for Store Ads</h3>
+            <p>TikTok Shop needed better ad candidates for stores, plus Tokopedia's data inside TikTok's ad models after the two platforms merged.</p>
+            <ul>
+              <li>Built ItemCF recall and worked on the fine-ranking CTR strategy</li>
+              <li>Led the cross-country integration of Tokopedia data into TikTok ad models</li>
+              <li>Consolidated CTR and CVR models, saving ~2 TB of storage with CTR +1.69%</li>
+              <li>Owned on-call for a mission-critical microservices system</li>
             </ul>
+            <div class="result">5% of ads GMV and 5% of ads revenue</div>
+            <div class="tags"><span>Go</span><span>C++</span><span>Python</span><span>Redis</span><span>Hive</span></div>
+          </article>
+          <article class="case">
+            <div class="case-meta">Tokopedia · Ads · <span class="nowrap">2022–2024</span></div>
+            <h3>Keyword quality and an ads service migration</h3>
+            <p>Low-quality keywords hurt ad relevance and bidding, and a tightly coupled ads service was costly to run.</p>
+            <ul>
+              <li>Built keyword validation to improve relevance and bidding</li>
+              <li>Fixed the data pipeline behind keyword insights</li>
+              <li>Planned and ran the service migration and its rollout monitoring</li>
+            </ul>
+            <div class="result">CTR +2.96%, CVR +3.37%, orders +19.6%, infra cost −30%</div>
+            <div class="tags"><span>Go</span><span>Java</span><span>MySQL</span><span>Elasticsearch</span><span>Redis</span><span>GCP</span></div>
+          </article>
+          <article class="case">
+            <div class="case-meta">Kulina · food.id · <span class="nowrap">2020–2022</span></div>
+            <h3>A quick-commerce backend, built whole</h3>
+            <p>Kulina needed the full backend for food.id, its quick-commerce platform.</p>
+            <ul>
+              <li>Architected and built the microservices, APIs and databases</li>
+              <li>Managed scope, requirements and timelines with frontend, QA, product and ops</li>
+              <li>Migrated services to cut cost and improve reliability</li>
+            </ul>
+            <div class="result">Production-grade backend that let the business launch fast</div>
+            <div class="tags"><span>Go</span><span>MySQL</span><span>MongoDB</span><span>NSQ</span><span>WebSocket</span><span>AWS</span></div>
+          </article>
+          <article class="case">
+            <div class="case-meta">Kokel · founder · <span class="nowrap">2026–now</span></div>
+            <h3>A software studio for small businesses</h3>
+            <p>I run Kokel, which builds websites and web apps for businesses, from the first call to launch and support.</p>
+            <ul>
+              <li>Order management system on Cloudflare Workers and D1</li>
+              <li>Client sites tuned for phones: mobile LCP from 3.1 s to under 1.6 s</li>
+              <li>Pipeline, SOPs and QA that keep delivery predictable</li>
+            </ul>
+            <div class="result"><a href="https://kokel.id" rel="noopener">kokel.id</a></div>
+            <div class="tags"><span>Cloudflare</span><span>JavaScript</span><span>Python</span><span>GitHub Actions</span></div>
+          </article>
         </div>
-    </nav>
-    <section id="home">
-        <div class="container">
-            <div class="mt-120 pl-0 ml-0">
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Pilih Bahasa
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="#" onclick="setLanguage('id')"><img class="w-20" src="assets/images/icon/indonesia.png" alt=""> Indonesia</a>
-                      <a class="dropdown-item" href="#" onclick="setLanguage('ko')"><img class="w-20" src="assets/images/icon/south-korea.png" alt=""> Korea</a>
-                    </div>
-                  </div>
-            </div>
-            <div class="row pt-50">
-                <div class="col-md-7 pl-15">
-                    <h1 class="m-0 text-black text-left opacity-8" style="font-weight: 900;" id="indexTitle"></h1>
-                    <div class="row mt-30">
-                        <div class="col-md-3">
-                            <a href="competency-map.html"><button type="button" class="btn btn-primary"><span id="competencyMap"></span></button></a>
-                        </div>
-                        <div class="col-md-3">
-                            <a href="preactivity.html"><button type="button" class="btn btn-primary"><span id="preactivity"></span></button></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+      </div>
     </section>
-    
-    <script src="assets/js/jquery-3.5.1.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/localize.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
 
-    <script>
-        function updateContent(translations) {
-            document.getElementById('preactivity').innerText = translations.preactivity;
-            document.getElementById('competencyMap').innerText = translations.competencyMap;
-            document.getElementById('navTitle').innerText = translations.navTitle;
-            document.getElementById('indexTitle').innerText = translations.indexTitle;
-            document.getElementById('home').innerText = translations.home;
-            document.getElementById('introduction').innerText = translations.introduction;
-            document.getElementById('guideline').innerText = translations.guideline;
-            document.getElementById('about').innerText = translations.about;
-        }
-    </script>
+    <section class="alt" id="experience" aria-labelledby="exp-h">
+      <div class="wrap">
+        <h2 id="exp-h">Experience</h2>
+        <p class="section-title">Six years of backend work, from startup to big tech.</p>
+        <ol class="jobs">
+          <li class="job"><div class="job-when">2026 – now</div><div class="job-what"><h3>Founder <span>· Kokel</span></h3><p>Software studio building websites and web apps for businesses.</p></div></li>
+          <li class="job"><div class="job-when">2024 – 2026</div><div class="job-what"><h3>Backend Engineer <span>· ByteDance</span></h3><p>TikTok Shop Ads: ad delivery, recall and ranking, data pipelines, on-call.</p></div></li>
+          <li class="job"><div class="job-when">2023 – 2024</div><div class="job-what"><h3>Backend Lead, part-time <span>· Wuiiy</span></h3><p>Skincare consultation and commerce app. Ran Scrum and mentored junior engineers.</p></div></li>
+          <li class="job"><div class="job-when">2022 – 2024</div><div class="job-what"><h3>Backend Engineer <span>· Tokopedia</span></h3><p>Ads keyword quality, keyword insights pipeline, service migration.</p></div></li>
+          <li class="job"><div class="job-when">2020 – 2022</div><div class="job-what"><h3>Backend Engineer <span>· Kulina</span></h3><p>Designed and built the food.id backend.</p></div></li>
+          <li class="job"><div class="job-when">2019 – 2020</div><div class="job-what"><h3>Frontend and Full-stack Developer <span>· Software Usaha Global Indonesia, BitZero Informatika</span></h3><p>Client applications, an in-house billing system, and IT consulting.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section aria-labelledby="skills-h">
+      <div class="wrap">
+        <h2 id="skills-h">Skills</h2>
+        <p class="section-title">What I work with.</p>
+        <div class="skills">
+          <div><h3>Languages</h3><p>Go (main), Python, Java, C++, JavaScript, PHP</p></div>
+          <div><h3>Data and messaging</h3><p>MySQL, MongoDB, Elasticsearch, Redis, Hive, NSQ, WebSocket</p></div>
+          <div><h3>Cloud and delivery</h3><p>AWS (ECS, Elastic Beanstalk, S3), GCP, Cloudflare Workers, D1 and R2, CI/CD</p></div>
+          <div><h3>Systems</h3><p>Microservices, distributed systems, data pipelines, performance tuning, service migrations</p></div>
+          <div><h3>Ads and experiments</h3><p>Recall and ranking, CTR/CVR models, bidding, A/B experiments and metrics</p></div>
+          <div><h3>Leading</h3><p>Scoping, cross-team and cross-country projects, Scrum, mentoring, on-call ownership</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt contact" id="contact" aria-labelledby="contact-h">
+      <div class="wrap">
+        <h2 id="contact-h">Contact</h2>
+        <p class="section-title">Have a backend that needs building or fixing?</p>
+        <p>Tell me what you're building and where it hurts. I'll reply within a working day with a short plan.</p>
+        <a class="mail" href="mailto:goenawan.fredy@gmail.com">goenawan.fredy@gmail.com</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© 2026 Fredy Gunawan</span>
+      <span>Indonesia · GMT+7</span>
+    </div>
+  </footer>
 </body>
-
 </html>
