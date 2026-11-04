@@ -1,6 +1,6 @@
 # Fredy Gunawan, personal site
 
-One static page (`index.html`, inline CSS, no build step) plus `img/`. Content comes from the resume and `03-professional/career/freelance-profiles.md` in the COG vault.
+One static page (`index.html`, inline CSS, no build step) with no images. Content comes from the resume and `03-professional/career/freelance-profiles.md` in the COG vault.
 
 ## Preview
 
